@@ -14,7 +14,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class CommandFrame {
+public class FrameWorkCommands {
 	protected Scanner scanner;
 	protected Document document;
 	
