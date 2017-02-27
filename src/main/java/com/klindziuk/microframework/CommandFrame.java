@@ -17,7 +17,9 @@ import org.jsoup.select.Elements;
 public class CommandFrame {
 	protected Scanner scanner;
 	protected Document document;
-
+	
+	//JSoup only downloads html code that is present in that page. 
+	//It does not download JavaScript-generated html, linked css or js or images.
 	public boolean open1(String URL, String timeout) {
 
 		int CONNECTION_TIMEOUT_MS = Integer.parseInt(timeout) * 1000;

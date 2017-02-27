@@ -1,0 +1,9 @@
+ + [open "http://protesting.ru/automation/" "3" ] 
+ ! [checkPageTitle "Software Test Automation" ] 
+ + [checkPageContains "Software Automation Tester" ] 
+ + [checkLinkPresentByHref "http://www.protesting.ru" ] 
+ ! [checkLinkPresentByName "Protesting" ] 
+Total tests: 5  
+Passed/Failed: 3/2 
+Total time: 5,000 
+Average time: 1,000 
