@@ -23,40 +23,35 @@ public class CommandExecutor {
 	private int failedCount;
 	private float fullTimeOfTests;
 
-	
 	public void writeLog() {
-		
-	try {
-	 BufferedWriter writer = new BufferedWriter(new FileWriter(logPath));
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter(logPath));
 			writer.write(printResult());
 			writer.close();
-
 		} catch (FileNotFoundException e) {
-
 		} catch (IOException e) {
-			
 			e.printStackTrace();
 		}
 	}
-		
+
 	public void execute(String importFile) {
 		frame = new FrameWorkCommands();
 		try {
-		File file = new File(importFile);
-		Scanner scanner = new Scanner(file);
-		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
-			List<String> listOfCommands = new ArrayList<>();
-			Matcher m = Pattern.compile("([^\"]\\S*|\".+?\")\\s*").matcher(line);
-			while (m.find()) {
-				listOfCommands.add(m.group(1).replace("\"", ""));
-			}
-			String methodname = listOfCommands.get(0);
-			startTestTime();
+			File file = new File(importFile);
+			Scanner scanner = new Scanner(file);
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				List<String> listOfCommands = new ArrayList<>();
+				Matcher m = Pattern.compile("([^\"]\\S*|\".+?\")\\s*").matcher(line);
+				while (m.find()) {
+					listOfCommands.add(m.group(1).replace("\"", ""));
+				}
+				String methodname = listOfCommands.get(0);
+				startTestTime();
 				switch (methodname) {
-				
+
 				case "open": {
-					testResult = frame.open1(listOfCommands.get(1),listOfCommands.get(2));
+					testResult = frame.open1(listOfCommands.get(1), listOfCommands.get(2));
 					break;
 				}
 				case "checkPageTitle": {
@@ -79,22 +74,19 @@ public class CommandExecutor {
 				finishTestTime();
 				countTestResult();
 				String executionResult = "";
-				executionResult = testResult ? " + " : " ! ";	
+				executionResult = testResult ? " + " : " ! ";
 				builder.append(executionResult + "[" + line + "]\n");
-				}
-		  scanner.close();	
-		} catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
-		}
-			finally {
-			
-			writeLog();
 			}
+			scanner.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			writeLog();
+		}
 	}
+
 	private void startTestTime() {
-		 startTime = System.nanoTime();
-		
+		startTime = System.nanoTime();
 	}
 
 	private void countTestResult() {
@@ -107,9 +99,9 @@ public class CommandExecutor {
 	}
 
 	private void finishTestTime() {
-	 long endTime = System.nanoTime();
-	 long	duration = (endTime - startTime) / 100000000;
-	  	fullTimeOfTests = fullTimeOfTests + duration;
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime) / 100000000;
+		fullTimeOfTests = fullTimeOfTests + duration;
 	}
 
 	private String printResult() {
@@ -120,6 +112,7 @@ public class CommandExecutor {
 		System.out.println(builder.toString()); // for testing
 		return builder.toString();
 	}
+
 	public void setLogPath(String logPath) {
 		this.logPath = logPath;
 	}
