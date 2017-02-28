@@ -44,6 +44,8 @@ public class CommandExecutor {
 				}
 				String methodname = listOfCommands.get(0);
 				startTestTime();
+				
+				try {
 				switch (methodname) {
 
 				case OPEN: {
@@ -70,24 +72,30 @@ public class CommandExecutor {
 					testResult = false;
 					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
 				}
-                			
 				}
+                	
 				finishTestTime();
 				countTestResult();
 				String executionResult  = testResult ? " + " : " ! ";
-				
 				builder.append(String.format("%s[%s] %.3f \n",executionResult,line,duration));
-			}
+				
+				}
+				catch (IndexOutOfBoundsException iobe) {
+					System.out.println("Not enought arguments in command: "+ line + ". Test with this command failed." );
+					testResult = false;
+					finishTestTime();
+					countTestResult();
+					builder.append(" ! " + "[" + line + "] " + "0,000" + "\n");
+				}
+					
+				}
+				
+				
+			
 			scanner.close();
 		} catch (FileNotFoundException fnfe) {
 			fnfe.printStackTrace();
-		} catch (IndexOutOfBoundsException iobe) {
-			System.out.println("Not enought arguments in command: "+ line + ". Test with this command failed." );
-			testResult = false;
-			finishTestTime();
-			countTestResult();
-			builder.append(" ! " + "[" + line + "] " + duration + "\n");
-		}
+		} 
 		finally {
 			writeLog();
 		}
@@ -119,7 +127,7 @@ public class CommandExecutor {
 	
 	private void finishTestTime() {
 		long endTime = System.nanoTime();
-		duration = (endTime - startTime) / 1000000000;
+		duration = (endTime - startTime) / 100000000;
 		fullTimeOfTests = fullTimeOfTests + duration;
 	}
 
