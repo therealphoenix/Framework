@@ -1,4 +1,0 @@
-Total tests: 0  
-Passed/Failed: 0/0 
-Total time: 0,000 
-Average time: NaN 

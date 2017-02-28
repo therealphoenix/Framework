@@ -1,8 +1,6 @@
 package com.klindziuk.microframework;
 
 import java.io.IOException;
-import java.util.Scanner;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,13 +8,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class FrameWorkCommands {
-	protected Scanner scanner;
+	
 	protected Document document;
 
 	// JSoup only downloads html code that is present in that page.
 	// It does not download JavaScript-generated html, linked css or js or
 	// images.That's why our tests will run faster.
-	public boolean open1(String URL, String timeout) {
+	public boolean open(String URL, String timeout) {
 		
 		int CONNECTION_TIMEOUT_MS = Integer.parseInt(timeout) * 1000;
 
@@ -36,7 +34,7 @@ public class FrameWorkCommands {
 	}
 
 	public boolean checkLinkPresentByName(String name) {
-		if ((null == document) || (null == name)) {
+		if ((null == document) || (null == name) || ("".equals(name))) {
 			return false;
 		} else {
 			Elements links = document.select("a[href]");
@@ -49,7 +47,7 @@ public class FrameWorkCommands {
 	}
 
 	public boolean checkLinkPresentByHref(String href) {
-		if ((null == document) || (null == href)) {
+		if ((null == document) || (null == href) || ("".equals(href))) {
 			return false;
 		} else {
 			Elements links = document.select("a[href]");
@@ -62,7 +60,7 @@ public class FrameWorkCommands {
 	}
 
 	public boolean checkPageTitle(String text) {
-		if ((null == document) || (null == text)) {
+		if ((null == document) || (null == text) || ("".equals(text))) {
 			return false;
 		} else {
 			return text.equals(document.title());
@@ -70,7 +68,7 @@ public class FrameWorkCommands {
 	}
 
 	public boolean checkPageContains(String text) {
-		if ((null == document) || (null == text)) {
+		if ((null == document) || (null == text) || ("".equals(text))) {
 			return false;
 		} else {
 			return document.toString().contains(text);

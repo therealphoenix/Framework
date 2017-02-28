@@ -5,7 +5,8 @@ import java.util.regex.Pattern;
 
 public class FrameWorkRunner {
 	protected static final String DEFAULT_LOG_PATH_AND_NAME = FrameWorkRunner.class.getProtectionDomain()
-			.getCodeSource().getLocation().getPath() + "microframework.txt";
+			.getCodeSource().getLocation().getPath() + "microframeworkLog.txt";
+	
 	private static String logPath;
 
 	public static void main(String[] args) {
@@ -22,7 +23,14 @@ public class FrameWorkRunner {
 			System.exit(-1);
 		}
 		// if user input equals path or don't input log path
-		if ((1 == args.length) || (args[0].equals(args[1]))) {
+		if  (args[0].equals(args[1])) {
+			System.out
+					.println("You  input equals path for instructions and log file.\nLog will be printed at " 
+			+ DEFAULT_LOG_PATH_AND_NAME);
+			logPath = DEFAULT_LOG_PATH_AND_NAME;
+		}
+		// if user  don't input log path
+		if (1 == args.length) {
 			System.out
 					.println("You don't input path for log file.\nLog will be printed at " + DEFAULT_LOG_PATH_AND_NAME);
 			logPath = DEFAULT_LOG_PATH_AND_NAME;

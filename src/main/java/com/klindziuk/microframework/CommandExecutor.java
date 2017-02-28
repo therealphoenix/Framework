@@ -12,17 +12,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CommandExecutor {
-	private final String OPEN = "open";
-	private final String LINK_BY_HREF = "checkLinkPresentByHref";
-	private final String LINK_BY_NAME = "checkLinkPresentByName";
-	private final String PAGE_TITLE = "checkPageTitle";
-	private final String PAGE_CONTAINS = "checkPageContains";
+	private static final String OPEN = "open";
+	private static final String LINK_BY_HREF = "checkLinkPresentByHref";
+	private static final String LINK_BY_NAME = "checkLinkPresentByName";
+	private static final String PAGE_TITLE = "checkPageTitle";
+	private static final String PAGE_CONTAINS = "checkPageContains";
 
-	private StringBuilder builder = new StringBuilder();
+	private StringBuilder builder; 
 	private FrameWorkCommands frame;
 	private String logPath;
 	private String line;
 	private long startTime;
+	private float duration;
 	private float fullTimeOfTests;
 	private int quantityOFTests;
 	private int passedCount;
@@ -46,7 +47,7 @@ public class CommandExecutor {
 				switch (methodname) {
 
 				case OPEN: {
-					testResult = frame.open1(listOfCommands.get(1), listOfCommands.get(2));
+					testResult = frame.open(listOfCommands.get(1), listOfCommands.get(2));
 					break;
 				}
 				case PAGE_TITLE: {
@@ -69,46 +70,26 @@ public class CommandExecutor {
 					testResult = false;
 					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
 				}
-                break;
-				
+                			
 				}
 				finishTestTime();
 				countTestResult();
 				String executionResult  = testResult ? " + " : " ! ";
-				builder.append(executionResult + "[" + line + "]\n");
+				
+				builder.append(String.format("%s[%s] %.3f \n",executionResult,line,duration));
 			}
 			scanner.close();
 		} catch (FileNotFoundException fnfe) {
-			System.out.println("1");
 			fnfe.printStackTrace();
 		} catch (IndexOutOfBoundsException iobe) {
 			System.out.println("Not enought arguments in command: "+ line + ". Test with this command failed." );
 			testResult = false;
 			finishTestTime();
 			countTestResult();
-			builder.append(" ! " + "[" + line + "]\n");
+			builder.append(" ! " + "[" + line + "] " + duration + "\n");
 		}
 		finally {
 			writeLog();
-		}
-	}
-
-	private void startTestTime() {
-		startTime = System.nanoTime();
-	}
-	
-	private void finishTestTime() {
-		long endTime = System.nanoTime();
-		long duration = (endTime - startTime) / 100000000;
-		fullTimeOfTests = fullTimeOfTests + duration;
-	}
-
-	private void countTestResult() {
-		quantityOFTests++;
-		if (testResult) {
-			passedCount++;
-		} else {
-			failedCount++;
 		}
 	}
 	
@@ -124,7 +105,33 @@ public class CommandExecutor {
 		}
 	}
 	
+	public void setLogPath(String logPath) {
+		this.logPath = logPath;
+	}
+	
+	public CommandExecutor() {
+		builder = new StringBuilder();
+	}
 
+	private void startTestTime() {
+		startTime = System.nanoTime();
+	}
+	
+	private void finishTestTime() {
+		long endTime = System.nanoTime();
+		duration = (endTime - startTime) / 1000000000;
+		fullTimeOfTests = fullTimeOfTests + duration;
+	}
+
+	private void countTestResult() {
+		quantityOFTests++;
+		if (testResult) {
+			passedCount++;
+		} else {
+			failedCount++;
+		}
+	}
+	
 	private String printResult() {
 		builder.append(String.format("Total tests: %s  \n", quantityOFTests))
 				.append(String.format("Passed/Failed: %d/%d \n", passedCount, failedCount))
@@ -132,10 +139,6 @@ public class CommandExecutor {
 				.append(String.format("Average time: %.3f \n", fullTimeOfTests / quantityOFTests));
 		System.out.println(builder.toString()); // output for user
 		return builder.toString();
-	}
-
-	public void setLogPath(String logPath) {
-		this.logPath = logPath;
 	}
 
 }
