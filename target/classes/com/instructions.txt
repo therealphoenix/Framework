@@ -1,0 +1,5 @@
+open "http://protesting.ru/" "3"
+checkPageTitle "Про Тестинг: тесты, тестирование и тестировщики программного обеспечения"
+checkPageContains "JTR - Java Test Runner"
+checkLinkPresentByHref "http://www.protesting.ru"
+checkLinkPresentByName "Стандарты"

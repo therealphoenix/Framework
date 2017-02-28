@@ -1,0 +1,9 @@
+ + [open "http://protesting.ru/automation/" "3"]
+ ! [checkPageTitle "Software Test Automation"]
+ + [checkPageContains "Test Run"]
+ + [checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"]
+ ! [checkLinkPresentByName ""]
+Total tests: 5  
+Passed/Failed: 3/2 
+Total time: 6,000 
+Average time: 1,200 

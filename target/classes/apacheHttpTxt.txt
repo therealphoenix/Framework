@@ -1,0 +1,37 @@
+public boolean open(String URL, String timeout) {
+
+		// Timeout in millis.
+		int CONNECTION_TIMEOUT_MS = Integer.parseInt(timeout) * 1000;
+
+		try {
+
+			RequestConfig requestConfig = RequestConfig.custom().setConnectionRequestTimeout(CONNECTION_TIMEOUT_MS)
+					.setConnectTimeout(CONNECTION_TIMEOUT_MS).setSocketTimeout(CONNECTION_TIMEOUT_MS).build();
+
+			CloseableHttpClient httpClient = HttpClients.createDefault();
+			HttpGet request = new HttpGet(URL);
+			request.setConfig(requestConfig);
+			HttpResponse response = httpClient.execute(request);
+
+			// Get the response
+			BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent()));
+			StringBuilder builder = new StringBuilder();
+
+			String html = "";
+			while ((html = reader.readLine()) != null) {
+				builder.append(html);
+			}
+			// html = builder.toString();
+			document = Jsoup.parse(builder.toString());
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		} catch (UnsupportedOperationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return true;
+	}
+
