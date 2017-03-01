@@ -18,7 +18,7 @@ public class CommandExecutor {
 	private static final String PAGE_TITLE = "checkPageTitle";
 	private static final String PAGE_CONTAINS = "checkPageContains";
 
-	private StringBuilder builder; 
+	private StringBuilder builder;
 	private FrameWorkCommands frame;
 	private Timer timer;
 	private String logPath;
@@ -29,7 +29,7 @@ public class CommandExecutor {
 	private int passedTestQuantity;
 	private int failedTestQuantity;
 	private boolean testResult;
-	
+
 	public void execute(String importFile) {
 		frame = new FrameWorkCommands();
 		try {
@@ -45,61 +45,53 @@ public class CommandExecutor {
 				String methodname = listOfCommands.get(0);
 				timer = new Timer();
 				timer.start();
-				//startTestTime();
-				
-				try {
-				
-				switch (methodname) {
 
-				case OPEN: {
-					testResult = frame.open(listOfCommands.get(1), listOfCommands.get(2));
-					break;
-				}
-				case PAGE_TITLE: {
-					testResult = frame.checkPageTitle(listOfCommands.get(1));
-					break;
-				}
-				case PAGE_CONTAINS: {
-					testResult = frame.checkPageContains(listOfCommands.get(1));
-					break;
-				}
-				case LINK_BY_HREF: {
-					testResult = frame.checkLinkPresentByHref(listOfCommands.get(1));
-					break;
-				}
-				case LINK_BY_NAME: {
-					testResult = frame.checkLinkPresentByName(listOfCommands.get(1));
-					break;
-				}
-				default: {
-					testResult = false;
-					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
-				}
-				}
-                
-				timer.stop();
-				durationOfTest = timer.getTestTime();
-				fullTimeOfTests = fullTimeOfTests + durationOfTest;
-				countTestResult();
-				String executionResult  = testResult ? " + " : " ! ";
-				builder.append(String.format("%s[%s] %.3f \n",executionResult,commandLline,durationOfTest));
-				
-				}
-				catch (IndexOutOfBoundsException iobe) {
-					
+				try {
+					switch (methodname) {
+					case OPEN: {
+						testResult = frame.open(listOfCommands.get(1), listOfCommands.get(2));
+						break;
+					}
+					case PAGE_TITLE: {
+						testResult = frame.checkPageTitle(listOfCommands.get(1));
+						break;
+					}
+					case PAGE_CONTAINS: {
+						testResult = frame.checkPageContains(listOfCommands.get(1));
+						break;
+					}
+					case LINK_BY_HREF: {
+						testResult = frame.checkLinkPresentByHref(listOfCommands.get(1));
+						break;
+					}
+					case LINK_BY_NAME: {
+						testResult = frame.checkLinkPresentByName(listOfCommands.get(1));
+						break;
+					}
+					default: {
+						testResult = false;
+						System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
+					}
+					}
+					timer.stop();
+					durationOfTest = timer.getTestTime();
+					fullTimeOfTests = fullTimeOfTests + durationOfTest;
+					countTestResult();
+					String executionResult = testResult ? " + " : " ! ";
+					builder.append(String.format("%s[%s] %.3f \n", executionResult, commandLline, durationOfTest));
+
+				} catch (IndexOutOfBoundsException iobe) {
 					testResult = false;
 					countTestResult();
-					System.out.println("Not enough arguments at : "+ commandLline + 
-							"(" + file.getName() +":"+ quantityOFTests +"). Test with this command failed." );
+					System.out.println("Not enough arguments at : " + commandLline + "(" + file.getName() + ":"
+							+ quantityOFTests + "). Test with this command failed.");
 					builder.append(" ! " + "[" + commandLline + "] " + "0,000" + "\n");
 				}
-					
-				}
+			}
 			scanner.close();
 		} catch (FileNotFoundException fnfe) {
 			fnfe.printStackTrace();
-		} 
-		finally {
+		} finally {
 			writeLog();
 		}
 	}
@@ -115,15 +107,12 @@ public class CommandExecutor {
 			e.printStackTrace();
 		}
 	}
-	
 	public void setLogPath(String logPath) {
 		this.logPath = logPath;
 	}
-	
 	public CommandExecutor() {
 		builder = new StringBuilder();
 	}
-
 	private void countTestResult() {
 		quantityOFTests++;
 		if (testResult) {
@@ -132,7 +121,6 @@ public class CommandExecutor {
 			failedTestQuantity++;
 		}
 	}
-	
 	private String printResult() {
 		builder.append(String.format("Total tests: %s  \n", quantityOFTests))
 				.append(String.format("Passed/Failed: %d/%d \n", passedTestQuantity, failedTestQuantity))

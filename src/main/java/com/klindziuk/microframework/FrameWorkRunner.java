@@ -38,7 +38,6 @@ public class FrameWorkRunner {
 		} else {
 			logPath = args[1];
 		}
-		System.out.println(checkPathWithRegExp("Program FilesEclipseIDEworkspaceFrameworkinstructions.txt"));
 		CommandExecutor fe = new CommandExecutor();
 		fe.setLogPath(logPath);
 		fe.execute(args[0]);

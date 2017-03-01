@@ -4,8 +4,7 @@ public class Timer {
 	
 	private long startTime;
 	private long stopTime;
-	
-	
+		
 	public void start() {
 		this.startTime = System.nanoTime();
 	}
@@ -18,12 +17,6 @@ public class Timer {
 		}
 	
 	
-//	public void calculateFullTime(long time) {
-//		this.allTestTime = this.allTestTime + time;
-//	}
-//		
-//	public long getFullTime(){
-//		return allTestTime  / 100000000;
-//	}
+
 	
 }
