@@ -40,7 +40,12 @@ public class FrameWorkRunner {
 		}
 		CommandExecutor fe = new CommandExecutor();
 		fe.setLogPath(logPath);
+		try {
 		fe.execute(args[0]);
+		}
+		catch(IllegalArgumentException iaex) {
+			System.out.println(iaex.getMessage());
+		}
 	}
 
 	public static boolean checkPathWithRegExp(String filePath) {

@@ -23,14 +23,13 @@ public class CommandExecutor {
 	private Timer timer;
 	private String logPath;
 	private String commandLline;
-	private float durationOfTest;
 	private float fullTimeOfTests;
 	private int quantityOFTests;
 	private int passedTestQuantity;
 	private int failedTestQuantity;
 	private boolean testResult;
 
-	public void execute(String importFile) {
+	public void execute(String importFile) throws IllegalArgumentException{
 		frame = new FrameWorkCommands();
 		try {
 			File file = new File(importFile);
@@ -42,11 +41,30 @@ public class CommandExecutor {
 				while (m.find()) {
 					listOfCommands.add(m.group(1).replace("\"", ""));
 				}
-				String methodname = listOfCommands.get(0);
+				
 				timer = new Timer();
 				timer.start();
-
+				String methodname = listOfCommands.get(0);
+				
+				// validation of parameters
+				 if("open".equals(methodname) && (3 < listOfCommands.size())){
+					testResult = false;
+					timer.setExceptionTime();
+					System.out.println("Too much arguments at: " + commandLline + "(" + file.getName() + ":"
+							+ (quantityOFTests + 1) + ").Test with this command failed.");
+					builder.append(" ! " + "[" + commandLline + "] " + timer.printTestTime() + "\n");
+				}
+				 				 
+				 else if(!"open".equals(methodname) && (2 < listOfCommands.size())){
+						testResult = false;
+						timer.setExceptionTime();
+						System.out.println("Too much arguments at: " + commandLline + "(" + file.getName() + ":"
+								+ (quantityOFTests + 1) + ").Test with this command failed.");
+						builder.append(" ! " + "[" + commandLline + "] " + timer.printTestTime() + "\n");
+					}
+				 else {
 				try {
+					
 					switch (methodname) {
 					case OPEN: {
 						testResult = frame.open(listOfCommands.get(1), listOfCommands.get(2));
@@ -74,20 +92,23 @@ public class CommandExecutor {
 					}
 					}
 					timer.stop();
-					durationOfTest = timer.getTestTime();
-					fullTimeOfTests = fullTimeOfTests + durationOfTest;
-					countTestResult();
+				    timer.getTestTime();
+					fullTimeOfTests = fullTimeOfTests +  timer.getTestTime();
 					String executionResult = testResult ? " + " : " ! ";
-					builder.append(String.format("%s[%s] %.3f \n", executionResult, commandLline, durationOfTest));
-
+					builder.append(String.format("%s[%s] %s \n", executionResult, commandLline,  timer.printTestTime()));
+					
 				} catch (IndexOutOfBoundsException iobe) {
 					testResult = false;
-					countTestResult();
-					System.out.println("Not enough arguments at : " + commandLline + "(" + file.getName() + ":"
-							+ quantityOFTests + "). Test with this command failed.");
+					timer.setExceptionTime();
+					System.out.println("Not enough arguments at: " + commandLline + "(" + file.getName() + ":"
+							+ (quantityOFTests + 1) + ").Test with this command failed.");
 					builder.append(" ! " + "[" + commandLline + "] " + "0,000" + "\n");
 				}
+				
 			}
+				 countTestResult();
+			}	 
+			
 			scanner.close();
 		} catch (FileNotFoundException fnfe) {
 			fnfe.printStackTrace();
