@@ -4,25 +4,26 @@ public class Timer {
 	
 	private long startTime;
 	private long stopTime;
-	private long allTestTime;
 	
-	public void setStartTime() {
+	
+	public void start() {
 		this.startTime = System.nanoTime();
 	}
 	
-	public void setStopTime() {
+	public void stop() {
 		this.stopTime = System.nanoTime();
 	}
 	public long getTestTime() {
-		return this.stopTime - this.startTime; 	
+		return (this.stopTime - this.startTime) / 100000000; 	// convert from nanoseconds to seconds
 		}
 	
-	public void calculateFullTime(long time) {
-		this.allTestTime = this.allTestTime + time;
-	}
-		
-	public long getFullTime(){
-		return allTestTime  / 100000000;
-	}
+	
+//	public void calculateFullTime(long time) {
+//		this.allTestTime = this.allTestTime + time;
+//	}
+//		
+//	public long getFullTime(){
+//		return allTestTime  / 100000000;
+//	}
 	
 }

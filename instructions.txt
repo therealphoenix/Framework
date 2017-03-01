@@ -1,4 +1,4 @@
-open "http://protesting.ru/automation/" 
+open "http://protesting.ru/automation/" "2"
 checkPageTitle 
 checkPageContains "Test Run"
 checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"

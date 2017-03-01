@@ -20,14 +20,14 @@ public class CommandExecutor {
 
 	private StringBuilder builder; 
 	private FrameWorkCommands frame;
+	private Timer timer;
 	private String logPath;
-	private String line;
-	private long startTime;
-	private float duration;
+	private String commandLline;
+	private float durationOfTest;
 	private float fullTimeOfTests;
 	private int quantityOFTests;
-	private int passedCount;
-	private int failedCount;
+	private int passedTestQuantity;
+	private int failedTestQuantity;
 	private boolean testResult;
 	
 	public void execute(String importFile) {
@@ -36,16 +36,19 @@ public class CommandExecutor {
 			File file = new File(importFile);
 			Scanner scanner = new Scanner(file);
 			while (scanner.hasNextLine()) {
-				line = scanner.nextLine();
+				commandLline = scanner.nextLine();
 				List<String> listOfCommands = new ArrayList<>();
-				Matcher m = Pattern.compile("([^\"]\\S*|\".+?\")\\s*").matcher(line);
+				Matcher m = Pattern.compile("([^\"]\\S*|\".+?\")\\s*").matcher(commandLline);
 				while (m.find()) {
 					listOfCommands.add(m.group(1).replace("\"", ""));
 				}
 				String methodname = listOfCommands.get(0);
-				startTestTime();
+				timer = new Timer();
+				timer.start();
+				//startTestTime();
 				
 				try {
+				
 				switch (methodname) {
 
 				case OPEN: {
@@ -73,25 +76,25 @@ public class CommandExecutor {
 					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
 				}
 				}
-                	
-				finishTestTime();
+                
+				timer.stop();
+				durationOfTest = timer.getTestTime();
+				fullTimeOfTests = fullTimeOfTests + durationOfTest;
 				countTestResult();
 				String executionResult  = testResult ? " + " : " ! ";
-				builder.append(String.format("%s[%s] %.3f \n",executionResult,line,duration));
+				builder.append(String.format("%s[%s] %.3f \n",executionResult,commandLline,durationOfTest));
 				
 				}
 				catch (IndexOutOfBoundsException iobe) {
-					System.out.println("Not enought arguments in command: "+ line + ". Test with this command failed." );
+					
 					testResult = false;
-					finishTestTime();
 					countTestResult();
-					builder.append(" ! " + "[" + line + "] " + "0,000" + "\n");
+					System.out.println("Not enough arguments at : "+ commandLline + 
+							"(" + file.getName() +":"+ quantityOFTests +"). Test with this command failed." );
+					builder.append(" ! " + "[" + commandLline + "] " + "0,000" + "\n");
 				}
 					
 				}
-				
-				
-			
 			scanner.close();
 		} catch (FileNotFoundException fnfe) {
 			fnfe.printStackTrace();
@@ -121,28 +124,18 @@ public class CommandExecutor {
 		builder = new StringBuilder();
 	}
 
-	private void startTestTime() {
-		startTime = System.nanoTime();
-	}
-	
-	private void finishTestTime() {
-		long endTime = System.nanoTime();
-		duration = (endTime - startTime) / 100000000;
-		fullTimeOfTests = fullTimeOfTests + duration;
-	}
-
 	private void countTestResult() {
 		quantityOFTests++;
 		if (testResult) {
-			passedCount++;
+			passedTestQuantity++;
 		} else {
-			failedCount++;
+			failedTestQuantity++;
 		}
 	}
 	
 	private String printResult() {
 		builder.append(String.format("Total tests: %s  \n", quantityOFTests))
-				.append(String.format("Passed/Failed: %d/%d \n", passedCount, failedCount))
+				.append(String.format("Passed/Failed: %d/%d \n", passedTestQuantity, failedTestQuantity))
 				.append(String.format("Total time: %.3f \n", fullTimeOfTests))
 				.append(String.format("Average time: %.3f \n", fullTimeOfTests / quantityOFTests));
 		System.out.println(builder.toString()); // output for user
