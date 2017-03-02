@@ -1,5 +1,0 @@
-open "http://protesting.ru/automation/" "3"
-checkPageTitle "Software Test Automation"
-checkPageContains "Software Automation Tester"
-checkLinkPresentByHref "./practice.html"
-checkLinkPresentByName "http://www.protesting.ru"

@@ -1,4 +1,4 @@
-package com.klindziuk.microframework;
+package com.klindziuk.framework;
 
 import java.util.regex.Pattern;
 
