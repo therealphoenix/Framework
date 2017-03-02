@@ -9,12 +9,14 @@ public class CommandResult {
 	private String command;
 	private float time;
 
-	public CommandResult(boolean result, String command, float time) {
+	public CommandResult(boolean result, String command) {
 		this.result = result;
 		this.command = command;
+		
+	}
+		public void setTime(float time) {
 		this.time = time;
 	}
-
 	public boolean isResult() {
 		return result;
 	}

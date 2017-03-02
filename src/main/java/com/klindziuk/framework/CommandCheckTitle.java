@@ -3,23 +3,16 @@ package com.klindziuk.framework;
 class CommandCheckTitle extends Command {
 	   public static final String name = "checkPageTitle";
 	   @Override
-	   public CommandResult run(String line, String...params) {
-		   timer.start();
+	   public CommandResult run(String...params) {
+		  
 	       System.out.println("Command: " + name);
 	       validateParams(params);
-	       if(params[0].equals(document.title())) {
-	    	   timer.stop();
-	    	   return new CommandResult(true, name, timer.getTestTime());
-	       }
-	       else {
-	    	   timer.stop();
-	    	   return new CommandResult(false, name,timer.getTestTime() );
-	       }
+	      return new CommandResult(params[0].equals(document.title()),name + " " + "\"" + params[0] + "\"");
 	       
 	   }
 
 	   @Override
-	   public boolean validateParams(String...params) {
+	   public void validateParams(String...params) {
 		   if(params.length < 1) {
 			   throw new NotEnoughArgumenException();
 		   }
@@ -29,7 +22,6 @@ class CommandCheckTitle extends Command {
 	       if(null == document){
 	    	   throw new NullDocumentException();
 	       }
-	        return false;
-	      
+	       	      
 	   }
 	}

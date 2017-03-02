@@ -9,14 +9,12 @@ class CommandOpen extends Command {
 	   public static final String name = "open";
 
 	   @Override
-	   public CommandResult run(String line, String...params) {
+	   public CommandResult run(String...params) {
 		   
 		   timer.start();
 	       System.out.println("Command: " + name);
 	       validateParams(params);
 	       
-	       // Put command logic implementation here:
-	       // 1. initialize the document object declared in the parent class
 	       int CONNECTION_TIMEOUT_MS = Integer.parseInt(params[1]) * 1000;
 
 			try {
@@ -24,7 +22,7 @@ class CommandOpen extends Command {
 				if(200 == response.statusCode()) {
 				document = response.parse();
 				timer.stop();
-				return new CommandResult(true, line, timer.getTestTime());
+				return new CommandResult(true,name + " " + "\"" + params[0] + "\""+ " \"" + params[1] + "\"" );
 				
 				}
 			} catch (IOException e) {
@@ -32,23 +30,21 @@ class CommandOpen extends Command {
 			} catch (IllegalArgumentException ieax) {
 				timer.setExceptionTime();
 				System.out.println("Unfortunately we can't try open " + "\"" + params[0] + "\"");
-				return new CommandResult(false, line, timer.getTestTime());
+				return new CommandResult(false,name + " " + "\"" + params[0] + "\""+ "\"" + params[1] + "\"" );
 			}
 			timer.stop();
-			return new CommandResult(false, line, timer.getTestTime());
-	        // dummy document string
-	        // replace name with required string command + params and set valid timing
+			return new CommandResult(false,name + " " + "\"" + params[0] + "\""+ "\"" + params[1] + "\"" );
+	        
 	   }
 
 	   @Override
-	   public boolean validateParams(String...params) {
+	   public void validateParams(String...params) {
 		   if(params.length < 2) {
 			   throw new NotEnoughArgumenException();
 		   }
 	       if(params.length > 2){
 	    	   throw new ManyArgumentException();
 	       }
-	    //   System.out.println("Number of params" + params.length);
-	       return false;
+	    	      
 	   }
 	}

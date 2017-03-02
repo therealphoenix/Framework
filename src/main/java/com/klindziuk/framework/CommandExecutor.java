@@ -20,6 +20,7 @@ public class CommandExecutor {
 	
 	private StringBuilder builder;
 	private List<CommandResult> logList;
+	private String methodname;
 	private int lineNumber;
 	private String logPath;
 	private String commandLine;
@@ -41,59 +42,50 @@ public class CommandExecutor {
 				while (m.find()) {
 					listOfCommands.add(m.group(1).replace("\"", ""));
 				}
-				String methodname = listOfCommands.get(0);
-				String[] params = setParameters(listOfCommands);
+				
 				try {
 					
-					switch (methodname) {
-					case OPEN: {
-						CommandResult resOpen= CommandEnum.getCommandByName("open").run(commandLine, params);
-						logList.add(resOpen);
-						break;
-										}
-					case PAGE_TITLE: {
-						CommandResult resCheckPageTitle = CommandEnum.getCommandByName("checkPageTitle").run(commandLine, params);
-						logList.add(resCheckPageTitle);
-						break;
-					}
-					case PAGE_CONTAINS: {
-						CommandResult resCheckPageContains = CommandEnum.getCommandByName("checkPageContains").run(commandLine, params);
-						logList.add(resCheckPageContains);
-						break;
-					}
-					case LINK_BY_NAME: {
-					CommandResult resCheckLinkPresentByName = CommandEnum.getCommandByName("checkLinkPresentByName").run(commandLine, params);
-						logList.add(resCheckLinkPresentByName);
-						break;
-					}
-					case LINK_BY_HREF: {
-						CommandResult resCheckLinkPresentByHref = CommandEnum.getCommandByName("checkLinkPresentByHref").run(commandLine, params);
-						logList.add(resCheckLinkPresentByHref);
-						break;
-					}
-					default: {
-						
-						System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
-					}
-					}
+					methodname = listOfCommands.get(0);
+					String[] params = setParameters(listOfCommands);
+					CommandResult cr = CommandEnum.getCommandByName(methodname).runWithTimer(params);
+					logList.add(cr);
 					
 				} catch (ManyArgumentException maex) {
 					System.out.println("Too much arguments at: " + commandLine + "(" + file.getName() + ":"
 								+ lineNumber + ").Test with this command failed.");
 					
-					logList.add(new CommandResult(false, commandLine, 0));
+					CommandResult exception = new CommandResult(false, commandLine);
+					exception.setTime(0);
+					logList.add(exception);
 				}
 				catch (NotEnoughArgumenException neex) {
 					System.out.println("Not enough arguments at: " + commandLine + "(" + file.getName() + ":"
 								+ lineNumber + ").Test with this command failed.");
 					
-					logList.add(new CommandResult(false, commandLine, 0));
+					CommandResult exception = new CommandResult(false, commandLine);
+					exception.setTime(0);
+					logList.add(exception);
 				}	
+				catch (UnsupportedOperationException uoex) {
+					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
+				}
 				catch (NullDocumentException ndex) {
 					System.out.println("Cannot instantiate test without opened page.");
 					
-					logList.add(new CommandResult(false, commandLine, 0));
-				}	
+					CommandResult exception = new CommandResult(false, commandLine);
+					exception.setTime(0);
+					logList.add(exception);
+				}
+				catch (IllegalArgumentException iobex) {
+					System.out.println("Unfortunately we don't support test for \"" +  methodname + "\".");	
+				}
+				
+				catch (IndexOutOfBoundsException iobex) {
+					System.out.println("Unfortunately we don't support test for \"" + " \"\" " + "\".");	
+				}
+				catch (NullPointerException npex) {
+					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");	
+				}
 					
 	}	
 			scanner.close();

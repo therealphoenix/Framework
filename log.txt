@@ -1,9 +1,8 @@
-+ [open "http://protesting.ru/automation/" "2"  ] 7,000
++ [open "http://protesting.ru/automation/" "2"] 7,000
 ! [checkPageTitle  ] 0,000
-+ [checkPageContains "Test Run" ] 0,000
++ [checkPageContains "Test Run"] 0,000
 ! [checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"] 0,000
-! [checkPageContains "Text" "1"] 0,000
-Total tests: 5  
-Passed/Failed: 2/3 
+Total tests: 4  
+Passed/Failed: 2/2 
 Total time: 7,000 
-Average time: 1,400 
+Average time: 1,750 

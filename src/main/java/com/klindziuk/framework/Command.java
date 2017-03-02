@@ -8,8 +8,17 @@ abstract class Command {
 	   protected Timer timer = new Timer();
 	   static protected Document document; // Replace String with Document
 
-	   abstract CommandResult run(String line,String...params);
-	   abstract boolean validateParams(String...params) throws IllegalArgumentException;
+	   abstract CommandResult run(String...params);
+	   abstract void validateParams(String...params) throws IllegalArgumentException;
+	   
+	   public CommandResult runWithTimer(String...params){
+		   Timer timer = new Timer();
+		   timer.start();
+		   CommandResult cr = run(params);
+		   timer.stop();
+		   cr.setTime(timer.getTestTime());
+		   return cr;
+	   }
 	   
 	   
 }

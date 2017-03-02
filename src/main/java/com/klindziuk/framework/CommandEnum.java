@@ -24,7 +24,10 @@ enum CommandEnum {
 	       this.command = command;
 	   }
 
-	   public static Command getCommandByName(String name) {
+	   public static Command getCommandByName(String name) throws UnsupportedOperationException {
+		   if(commandMap.containsKey(name)) {
+			   throw new IllegalArgumentException();
+		   }
 	       return commandMap.get(name.toUpperCase()).command;
 	   }
 	}
