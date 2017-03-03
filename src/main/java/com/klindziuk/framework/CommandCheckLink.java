@@ -17,7 +17,7 @@ class CommandCheckLink extends Command {
 	@Override
 	public void validateParams(String... params) {
 		if (params.length < 1) {
-			throw new NotEnoughArgumenException();
+			throw new NotEnoughArgumentException();
 		}
 		if (params.length > 1) {
 			throw new ManyArgumentException();

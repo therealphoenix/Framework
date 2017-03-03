@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
-class CommandOpen extends Command {
+public class CommandOpen extends Command {
 	   public static final String name = "open";
 
 	   @Override
@@ -36,7 +36,7 @@ class CommandOpen extends Command {
 	   @Override
 	   public void validateParams(String...params) {
 		   if(params.length < 2) {
-			   throw new NotEnoughArgumenException();
+			   throw new NotEnoughArgumentException();
 		   }
 	       if(params.length > 2){
 	    	   throw new ManyArgumentException();

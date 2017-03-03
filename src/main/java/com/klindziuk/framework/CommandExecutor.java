@@ -58,7 +58,7 @@ public class CommandExecutor {
 					exception.setTime(0);
 					logList.add(exception);
 				}
-				catch (NotEnoughArgumenException neex) {
+				catch (NotEnoughArgumentException neex) {
 					System.out.println("Not enough arguments at: " + commandLine + "(" + file.getName() + ":"
 								+ lineNumber + ").Test with this command failed.");
 					

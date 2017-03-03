@@ -2,7 +2,7 @@ package com.klindziuk.framework;
 
 import org.jsoup.nodes.Document;
 
-abstract class Command {
+public abstract class Command {
 	   public static final String name = "unknown";
 	   protected String [] params;
 	   protected Timer timer = new Timer();
