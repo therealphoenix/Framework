@@ -1,6 +1,5 @@
 package com.klindziuk.framework;
 
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 class CommandCheckLink extends Command {
@@ -8,20 +7,12 @@ class CommandCheckLink extends Command {
 
 	@Override
 	public CommandResult run(String... params) {
-		timer.start();
 		System.out.println("Command: " + name);
 		validateParams(params);
-		
 		Elements links = document.select("a[href]");
-		for (Element link : links) {
-			if (name.equals(link.text())) {
-				
-				return new CommandResult(true, name + " " + "\"" + params[0] + "\"");
+		return new CommandResult(links.contains(params[0]), name + " " + "\"" + params[0] + "\"");
 			}
-		}
-				return new CommandResult(false, name + " " + "\"" + params[0] + "\"");
-			}
-		
+	
 	
 	@Override
 	public void validateParams(String... params) {

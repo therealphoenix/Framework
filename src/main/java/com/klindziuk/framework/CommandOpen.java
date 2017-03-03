@@ -10,9 +10,7 @@ class CommandOpen extends Command {
 
 	   @Override
 	   public CommandResult run(String...params) {
-		   
-		   timer.start();
-	       System.out.println("Command: " + name);
+		    System.out.println("Command: " + name);
 	       validateParams(params);
 	       
 	       int CONNECTION_TIMEOUT_MS = Integer.parseInt(params[1]) * 1000;
@@ -21,10 +19,9 @@ class CommandOpen extends Command {
 				Connection.Response response = Jsoup.connect(params[0]).timeout(CONNECTION_TIMEOUT_MS).execute();
 				if(200 == response.statusCode()) {
 				document = response.parse();
-				timer.stop();
-				return new CommandResult(true,name + " " + "\"" + params[0] + "\""+ " \"" + params[1] + "\"" );
 				
-				}
+				return new CommandResult(true,name + " " + "\"" + params[0] + "\""+ " \"" + params[1] + "\"" );
+			}
 			} catch (IOException e) {
 
 			} catch (IllegalArgumentException ieax) {
@@ -32,9 +29,8 @@ class CommandOpen extends Command {
 				System.out.println("Unfortunately we can't try open " + "\"" + params[0] + "\"");
 				return new CommandResult(false,name + " " + "\"" + params[0] + "\""+ "\"" + params[1] + "\"" );
 			}
-			timer.stop();
 			return new CommandResult(false,name + " " + "\"" + params[0] + "\""+ "\"" + params[1] + "\"" );
-	        
+	      
 	   }
 
 	   @Override

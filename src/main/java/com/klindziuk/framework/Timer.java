@@ -2,7 +2,6 @@ package com.klindziuk.framework;
 
 
 public class Timer {
-	String format = "#0.000";
 	
 	private long startTime;
 	private long stopTime;
