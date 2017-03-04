@@ -10,7 +10,6 @@
           <include name="commandWithTimer_Test_ValidArguments_Positive"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="validateParams_Test_Null_Document"/>
           <include name="commandWithTimer_Test_ValidArguments_Negative"/>
           <include name="beforeClass"/>
         </methods>

@@ -15,13 +15,13 @@ public class CommandCheckContains extends Command {
 	   @Override
 	   public void validateParams(String...params) {
 		   if(params.length < 1) {
-			   throw new NotEnoughArgumentException();
+			   throw new IllegalArgumentException(NOT_ENOUGH_ARGS);
 		   }
 	       if(params.length > 1){
-	    	   throw new ManyArgumentException();
+	    	   throw new IllegalArgumentException(TOO_MANY_ARGS);
 	       }
 	       if(null == document){
-	    	   throw new NullDocumentException();
+	    	   throw new IllegalStateException(NULL_DOCUMENT);
 	       }
 	       
 	   }

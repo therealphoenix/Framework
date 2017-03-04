@@ -5,3 +5,4 @@ checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"
 fffff
 dwdwqdqqw
 ""
+checkPageTitle11

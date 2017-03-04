@@ -13,9 +13,6 @@ import org.testng.annotations.Test;
 import com.klindziuk.framework.CommandOpen;
 import com.klindziuk.framework.CommandCheckContains;
 import com.klindziuk.framework.CommandResult;
-import com.klindziuk.framework.ManyArgumentException;
-import com.klindziuk.framework.NotEnoughArgumentException;
-import com.klindziuk.framework.NullDocumentException;
 import com.klindziuk.framework.Command;
 
 
@@ -84,23 +81,24 @@ public class CommandCheckContainsTest {
 	 	   cC.run(text);	   
 	   }
   
-//method should throw NullDocumentException for empty document
-  @Test(expectedExceptions = NullDocumentException.class)
+//method should throw NullDocumentException for null document
+  @Test(expectedExceptions = IllegalStateException.class)
   public void validateParams_Test_Null_Document() {
+	  cO.run("https://jsoup.org/cookbook111/", "3"); // reset to null document
 	 CommandCheckContains command = new CommandCheckContains();
 	  String text = "Doesn't matter";
 	  command.validateParams(text);
 	    }
 //method should throw ManyArgumentsException if length of array will be greater than 1.
-    @Test(expectedExceptions = ManyArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
   public void validateParams_Test_ToManyArguments() {
 	 CommandCheckContains command = new CommandCheckContains();
 	  String[] params = {"1","2","100"};
 	  command.validateParams(params);
 	  
   }
-  //method should throw ManyArgumentsException if length of array will be smaller than 0.
-    @Test(expectedExceptions = NotEnoughArgumentException.class)
+  //method should throw NotEnoughException if length of array will be smaller than 0.
+    @Test(expectedExceptions = IllegalArgumentException.class)
     public void validateParams_Test_NotEnoughArguments() {
   	 CommandCheckContains command = new CommandCheckContains();
   	  String[] params = {};
@@ -129,7 +127,6 @@ public class CommandCheckContainsTest {
     public void commandWithTimer_Test_ValidArguments_Negative() {
     	String text = "I think this page do not have this text";
   	  CommandResult expectedResult  = cC.runWithTimer(text);
-  	  result = new CommandResult(false, "checkPageContains" + " " + "\"" + text + "\"");
   	  Assert.assertEquals(expectedResult, result);
   	  Assert.assertTrue(expectedResult.getTime() > 0);
     	
@@ -142,7 +139,7 @@ public class CommandCheckContainsTest {
   	  
     }
     //method should throw NullPointerException for empty String
-    @Test(expectedExceptions = NotEnoughArgumentException.class)
+    @Test(expectedExceptions = IllegalArgumentException.class)
   	   public void commandWithTimer_Test_ValidSizeParams_EmptyString() {
     	String[] params = {};
   	 	result  = cC.runWithTimer(params);	   

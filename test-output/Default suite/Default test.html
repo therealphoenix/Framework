@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>8/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 03 23:08:42 EET 2017</td>
+<td>Started on:</td><td>Sat Mar 04 19:37:34 EET 2017</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1834 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2804 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,13 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative()'><b>commandWithTimer_Test_ValidArguments_Negative</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+<td><div><pre>java.lang.AssertionError: expected [null] but found [! [checkPageContains &quot;I think this page do not have this text&quot;] 0,000]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative(CommandCheckContainsTest.java:134)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:130)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative(CommandCheckContainsTest.java:130)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,13 +108,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace20420434", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace20420434'><pre>java.lang.AssertionError: expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace29011566", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace29011566'><pre>java.lang.AssertionError: expected [null] but found [! [checkPageContains &quot;I think this page do not have this text&quot;] 0,000]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative(CommandCheckContainsTest.java:134)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:130)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative(CommandCheckContainsTest.java:130)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -141,7 +143,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive()'><b>commandWithTimer_Test_ValidArguments_Positive</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
@@ -149,7 +151,7 @@ function toggleAllBoxes() {
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive(CommandCheckContainsTest.java:124)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive(CommandCheckContainsTest.java:122)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -175,13 +177,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace10633934", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace10633934'><pre>java.lang.AssertionError: expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace24824628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace24824628'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertTrue(Assert.java:42)
 	at org.testng.Assert.assertTrue(Assert.java:52)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive(CommandCheckContainsTest.java:124)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive(CommandCheckContainsTest.java:122)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -209,65 +211,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
-<tr>
-<td title='CommandTest.CommandCheckContainsTest.validateParams_Test_Null_Document()'><b>validateParams_Test_Null_Document</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
-<td><div><pre>org.testng.TestException: 
-Method CommandCheckContainsTest.validateParams_Test_Null_Document()[pri:0, instance:CommandTest.CommandCheckContainsTest@12cc05a] should have thrown an exception of type class com.klindziuk.framework.NullDocumentException
-	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
-	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace4246932", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace4246932'><pre>org.testng.TestException: 
-Method CommandCheckContainsTest.validateParams_Test_Null_Document()[pri:0, instance:CommandTest.CommandCheckContainsTest@12cc05a] should have thrown an exception of type class com.klindziuk.framework.NullDocumentException
-	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
-	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div></td>
-<td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.validateParams_Test_Null_params()'><b>validateParams_Test_Null_params</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
 <td><div><pre>org.testng.TestException: 
-Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instance:CommandTest.CommandCheckContainsTest@12cc05a] should have thrown an exception of type class java.lang.NullPointerException
+Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.NullPointerException
 	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
 	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
@@ -290,9 +238,9 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2706139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2706139'><pre>org.testng.TestException: 
-Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instance:CommandTest.CommandCheckContainsTest@12cc05a] should have thrown an exception of type class java.lang.NullPointerException
+</pre></div><a href='#' onClick='toggleBox("stack-trace5221320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace5221320'><pre>org.testng.TestException: 
+Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.NullPointerException
 	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
 	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
@@ -317,7 +265,7 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -331,8 +279,8 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 <td><div><pre>java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:12)
-	at com.klindziuk.framework.Command.runWithTimer(Command.java:17)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_NullArguments(CommandCheckContainsTest.java:141)
+	at com.klindziuk.framework.Command.runWithTimer(Command.java:20)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_NullArguments(CommandCheckContainsTest.java:138)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -358,12 +306,12 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2606604", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2606604'><pre>java.lang.NullPointerException
+</pre></div><a href='#' onClick='toggleBox("stack-trace92623", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace92623'><pre>java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:12)
-	at com.klindziuk.framework.Command.runWithTimer(Command.java:17)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_NullArguments(CommandCheckContainsTest.java:141)
+	at com.klindziuk.framework.Command.runWithTimer(Command.java:20)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_NullArguments(CommandCheckContainsTest.java:138)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -391,14 +339,14 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString()'><b>commandWithTimer_Test_ValidSizeParams_EmptyString</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
-<td><div><pre>com.klindziuk.framework.NotEnoughArgumentException
+<td><div><pre>java.lang.IllegalArgumentException: Not enough parameters at: 
 	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:18)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:11)
-	at com.klindziuk.framework.Command.runWithTimer(Command.java:17)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:148)
+	at com.klindziuk.framework.Command.runWithTimer(Command.java:20)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -424,12 +372,12 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace5727294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace5727294'><pre>com.klindziuk.framework.NotEnoughArgumentException
+</pre></div><a href='#' onClick='toggleBox("stack-trace12182101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace12182101'><pre>java.lang.IllegalArgumentException: Not enough parameters at: 
 	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:18)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:11)
-	at com.klindziuk.framework.Command.runWithTimer(Command.java:17)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:148)
+	at com.klindziuk.framework.Command.runWithTimer(Command.java:20)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -457,13 +405,13 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString()'><b>run_Test_ValidSizeParams_EmptyString</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
 <td><div><pre>java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:12)
-	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:84)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:81)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -489,11 +437,11 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace21062416", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace21062416'><pre>java.lang.NullPointerException
+</pre></div><a href='#' onClick='toggleBox("stack-trace13796064", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace13796064'><pre>java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:12)
-	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:84)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:81)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -521,13 +469,13 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments()'><b>run_Test_ValidSizeParams_NullArguments</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
 <td><div><pre>java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:12)
-	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments(CommandCheckContainsTest.java:77)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments(CommandCheckContainsTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -553,11 +501,11 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace7584206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace7584206'><pre>java.lang.NullPointerException
+</pre></div><a href='#' onClick='toggleBox("stack-trace14551334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace14551334'><pre>java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
 	at com.klindziuk.framework.CommandCheckContains.run(CommandCheckContains.java:12)
-	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments(CommandCheckContainsTest.java:77)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments(CommandCheckContainsTest.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -585,22 +533,22 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_ValidArguments_Negative()'><b>run_Test_ValidSizeParams_ValidArguments_Negative</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
 <td></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_ValidArguments_Positive()'><b>run_Test_ValidSizeParams_ValidArguments_Positive</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
 <td></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.validateParams_Test_NotEnoughArguments()'><b>validateParams_Test_NotEnoughArguments</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
-<td><div><pre>com.klindziuk.framework.NotEnoughArgumentException
+<td><div><pre>java.lang.IllegalArgumentException: Not enough parameters at: 
 	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:18)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_NotEnoughArguments(CommandCheckContainsTest.java:107)
+	at CommandTest.CommandCheckContainsTest.validateParams_Test_NotEnoughArguments(CommandCheckContainsTest.java:105)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -626,10 +574,10 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace32135860", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace32135860'><pre>com.klindziuk.framework.NotEnoughArgumentException
+</pre></div><a href='#' onClick='toggleBox("stack-trace11601748", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace11601748'><pre>java.lang.IllegalArgumentException: Not enough parameters at: 
 	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:18)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_NotEnoughArguments(CommandCheckContainsTest.java:107)
+	at CommandTest.CommandCheckContainsTest.validateParams_Test_NotEnoughArguments(CommandCheckContainsTest.java:105)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -657,12 +605,74 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
+<tr>
+<td title='CommandTest.CommandCheckContainsTest.validateParams_Test_Null_Document()'><b>validateParams_Test_Null_Document</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
+<td><div><pre>java.lang.IllegalStateException: Cannot instantiate test without opened page.
+	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:24)
+	at CommandTest.CommandCheckContainsTest.validateParams_Test_Null_Document(CommandCheckContainsTest.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div><a href='#' onClick='toggleBox("stack-trace30063402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace30063402'><pre>java.lang.IllegalStateException: Cannot instantiate test without opened page.
+	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:24)
+	at CommandTest.CommandCheckContainsTest.validateParams_Test_Null_Document(CommandCheckContainsTest.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+</pre></div></td>
+<td>1</td>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 <tr>
 <td title='CommandTest.CommandCheckContainsTest.validateParams_Test_ToManyArguments()'><b>validateParams_Test_ToManyArguments</b><br>Test class: CommandTest.CommandCheckContainsTest</td>
-<td><div><pre>com.klindziuk.framework.ManyArgumentException
+<td><div><pre>java.lang.IllegalArgumentException: Too many parameters at: 
 	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:21)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_ToManyArguments(CommandCheckContainsTest.java:99)
+	at CommandTest.CommandCheckContainsTest.validateParams_Test_ToManyArguments(CommandCheckContainsTest.java:97)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -688,10 +698,10 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div><a href='#' onClick='toggleBox("stack-trace21563224", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace21563224'><pre>com.klindziuk.framework.ManyArgumentException
+</pre></div><a href='#' onClick='toggleBox("stack-trace9446968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9446968'><pre>java.lang.IllegalArgumentException: Too many parameters at: 
 	at com.klindziuk.framework.CommandCheckContains.validateParams(CommandCheckContains.java:21)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_ToManyArguments(CommandCheckContainsTest.java:99)
+	at CommandTest.CommandCheckContainsTest.validateParams_Test_ToManyArguments(CommandCheckContainsTest.java:97)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -719,7 +729,7 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>CommandTest.CommandCheckContainsTest@12cc05a</td></tr>
+<td>CommandTest.CommandCheckContainsTest@19f379</td></tr>
 </table><p>
 </body>
 </html>

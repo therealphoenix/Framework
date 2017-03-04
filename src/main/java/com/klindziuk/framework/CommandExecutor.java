@@ -50,36 +50,26 @@ public class CommandExecutor {
 					CommandResult cr = CommandEnum.getCommandByName(methodname).runWithTimer(params);
 					logList.add(cr);
 					
-				} catch (ManyArgumentException maex) {
-					System.out.println("Too much arguments at: " + commandLine + "(" + file.getName() + ":"
+				} catch (IllegalArgumentException iaex) {
+					System.out.println(iaex.getMessage() + commandLine + "(" + file.getName() + ":"
 								+ lineNumber + ").Test with this command failed.");
 					
 					CommandResult exception = new CommandResult(false, commandLine);
 					exception.setTime(0);
 					logList.add(exception);
 				}
-				catch (NotEnoughArgumentException neex) {
-					System.out.println("Not enough arguments at: " + commandLine + "(" + file.getName() + ":"
-								+ lineNumber + ").Test with this command failed.");
 					
-					CommandResult exception = new CommandResult(false, commandLine);
-					exception.setTime(0);
-					logList.add(exception);
-				}	
 				catch (UnsupportedOperationException uoex) {
 					System.out.println("Unfortunately we don't support test for \"" + methodname + "\".");
 				}
-				catch (NullDocumentException ndex) {
+				catch (IllegalStateException ndex) {
 					System.out.println("Cannot instantiate test without opened page.");
 					
 					CommandResult exception = new CommandResult(false, commandLine);
 					exception.setTime(0);
 					logList.add(exception);
 				}
-				catch (IllegalArgumentException iobex) {
-					System.out.println("Unfortunately we don't support test for \"" +  methodname + "\".");	
-				}
-				
+								
 				catch (IndexOutOfBoundsException iobex) {
 					System.out.println("Unfortunately we don't support test for \"" + " \"\" " + "\".");	
 				}

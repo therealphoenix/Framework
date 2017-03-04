@@ -1,6 +1,5 @@
 package com.klindziuk.framework;
 
-import java.util.EnumSet;
 import java.util.HashMap;
 
 enum CommandEnum {
@@ -14,7 +13,7 @@ enum CommandEnum {
 
 	   static {
 	       commandMap = new HashMap<>();
-	       for (CommandEnum s : EnumSet.allOf(CommandEnum.class))
+	       for (CommandEnum s : CommandEnum.values())
 	           commandMap.put(s.name().toUpperCase(), s);
 	   }
 
@@ -24,9 +23,9 @@ enum CommandEnum {
 	       this.command = command;
 	   }
 
-	   public static Command getCommandByName(String name) throws UnsupportedOperationException {
+	   public static Command getCommandByName(String name)  {
 		   if(commandMap.containsKey(name)) {
-			   throw new IllegalArgumentException();
+			   throw new UnsupportedOperationException();
 		   }
 	       return commandMap.get(name.toUpperCase()).command;
 	   }

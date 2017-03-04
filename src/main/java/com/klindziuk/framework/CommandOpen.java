@@ -26,9 +26,11 @@ public class CommandOpen extends Command {
 
 			} catch (IllegalArgumentException ieax) {
 				timer.setExceptionTime();
+				document = null;
 				System.out.println("Unfortunately we can't try open " + "\"" + params[0] + "\"");
 				return new CommandResult(false,name + " " + "\"" + params[0] + "\""+ "\"" + params[1] + "\"" );
 			}
+			document = null;
 			return new CommandResult(false,name + " " + "\"" + params[0] + "\""+ "\"" + params[1] + "\"" );
 	      
 	   }
@@ -36,11 +38,11 @@ public class CommandOpen extends Command {
 	   @Override
 	   public void validateParams(String...params) {
 		   if(params.length < 2) {
-			   throw new NotEnoughArgumentException();
+			   throw new IllegalArgumentException(NOT_ENOUGH_ARGS);
 		   }
 	       if(params.length > 2){
-	    	   throw new ManyArgumentException();
+	    	   throw new IllegalArgumentException(TOO_MANY_ARGS);
 	       }
-	    	      
+	       	       
 	   }
 	}
