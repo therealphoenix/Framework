@@ -1,6 +1,6 @@
 package com.klindziuk.framework;
 
-public class CommandCheckContains extends Command {
+public class CommandCheckContainsText extends Command {
 
 	   public static final String name = "checkPageContains";
 

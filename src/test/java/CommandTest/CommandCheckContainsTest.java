@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.klindziuk.framework.CommandOpen;
-import com.klindziuk.framework.CommandCheckContains;
+import com.klindziuk.framework.CommandCheckContainsText;
 import com.klindziuk.framework.CommandResult;
 import com.klindziuk.framework.Command;
 
@@ -19,7 +19,7 @@ import com.klindziuk.framework.Command;
 public class CommandCheckContainsTest {
 	
 	CommandResult result;
-	CommandCheckContains cC;
+	CommandCheckContainsText cC;
 	CommandOpen cO;
 	String URL = "http://protesting.ru/automation/";
 	String timeout = "3";
@@ -30,7 +30,7 @@ public class CommandCheckContainsTest {
   public void beforeMethod() {
 	  cO = new CommandOpen();
 	  cO.run(URL,timeout);
-	  cC = new  CommandCheckContains();
+	  cC = new  CommandCheckContainsText();
 	 
   }
     @AfterMethod
@@ -85,14 +85,14 @@ public class CommandCheckContainsTest {
   @Test(expectedExceptions = IllegalStateException.class)
   public void validateParams_Test_Null_Document() {
 	  cO.run("https://jsoup.org/cookbook111/", "3"); // reset to null document
-	 CommandCheckContains command = new CommandCheckContains();
+	 CommandCheckContainsText command = new CommandCheckContainsText();
 	  String text = "Doesn't matter";
 	  command.validateParams(text);
 	    }
 //method should throw ManyArgumentsException if length of array will be greater than 1.
     @Test(expectedExceptions = IllegalArgumentException.class)
   public void validateParams_Test_ToManyArguments() {
-	 CommandCheckContains command = new CommandCheckContains();
+	 CommandCheckContainsText command = new CommandCheckContainsText();
 	  String[] params = {"1","2","100"};
 	  command.validateParams(params);
 	  
@@ -100,14 +100,14 @@ public class CommandCheckContainsTest {
   //method should throw NotEnoughException if length of array will be smaller than 0.
     @Test(expectedExceptions = IllegalArgumentException.class)
     public void validateParams_Test_NotEnoughArguments() {
-  	 CommandCheckContains command = new CommandCheckContains();
+  	 CommandCheckContainsText command = new CommandCheckContainsText();
   	  String[] params = {};
   	  command.validateParams(params);
 }
   //method should throw NullDocumentException for null String
     @Test(expectedExceptions = NullPointerException.class)
     public void validateParams_Test_Null_params() {
-  	 CommandCheckContains command = new CommandCheckContains();
+  	 CommandCheckContainsText command = new CommandCheckContainsText();
   	  String text = null;
   	  command.validateParams(text);
    }
