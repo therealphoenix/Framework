@@ -1,7 +1,8 @@
-open "http://protesting.ru/automation/" "2"  
-checkPageTitle "1"
-checkPageContainsText 
-checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"
+open "https://jsoup.org/" "2"  
+checkPageTitle "jsoup Java HTML Parser, with best of DOM, CSS, and jquery"
+checkPageContainsText  "CSS selectors"
+checkLinkPresentByHref "//try.jsoup.org/~LGB7rk_atM2roavV0d-czMt3J_g"
+checkLinkPresentByName "online sample"
 fffff
 dwdwqdqqw
 checkPageTitle11

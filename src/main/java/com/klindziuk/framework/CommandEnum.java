@@ -5,7 +5,7 @@ import java.util.HashMap;
 enum CommandEnum {
 	
 	    open(new CommandOpen()),
-	    checkLinkPresentByHref(new CommandCheckLink()),
+	    checkLinkPresentByHref(new CommandCheckLinkHref()),
 	    checkLinkPresentByName(new CommandCheckLinkName()),
 	    checkPageTitle(new CommandCheckTitle()),
 	    checkPageContainsText(new CommandCheckContainsText());
