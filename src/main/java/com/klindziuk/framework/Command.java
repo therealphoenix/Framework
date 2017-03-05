@@ -12,7 +12,7 @@ public abstract class Command {
 	   static protected Document document; 
 
 	   abstract CommandResult run(String...params);
-	   abstract void validateParams(String...params) throws IllegalArgumentException;
+	   abstract boolean validateParams(String...params) throws IllegalArgumentException;
 	   
 	   public CommandResult runWithTimer(String...params){
 		   Timer timer = new Timer();

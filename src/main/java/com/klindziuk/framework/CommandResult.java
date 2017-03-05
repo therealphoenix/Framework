@@ -14,6 +14,12 @@ public class CommandResult {
 		this.command = command;
 		
 	}
+	public CommandResult(boolean result, String command,float time) {
+		this.result = result;
+		this.command = command;
+		this.time = time;
+		
+	}
 		public void setTime(float time) {
 		this.time = time;
 	}

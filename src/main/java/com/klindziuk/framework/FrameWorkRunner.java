@@ -8,7 +8,7 @@ public class FrameWorkRunner {
 	
 	private static String logPath;
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		
 		// checking for special symbols in path
 		if (checkPathWithRegExp(args[0]) || checkPathWithRegExp(args[1])) {
@@ -38,9 +38,10 @@ public class FrameWorkRunner {
 		} else {
 			logPath = args[1];
 		}
+		
 		CommandExecutor fe = new CommandExecutor();
 		fe.setLogPath(logPath);
-		try {
+				try {
 		fe.execute(args[0]);
 		}
 		catch(IllegalArgumentException iaex) {
@@ -55,5 +56,20 @@ public class FrameWorkRunner {
 					}
 		return false;
 	}
+	
+//	 private void updateLog4jConfiguration(String logFile) { 
+//		 File file = new File("resources.properties");
+//		 System.out.println(file.getAbsolutePath());
+//		    Properties props = new Properties(); 
+//		    try { 
+//		        InputStream configStream = getClass().getResourceAsStream("D:/Program Files/EclipseIDE/workspace/Framework/target/classes/log4j.properties"); 
+//		        props.load(configStream); 
+//		        configStream.close(); 
+//		    } catch (IOException e) { 
+//		        System.out.println("Error: Cannot laod configuration file "); 
+//		    } 
+//		    props.setProperty("log4j.appender.FILE.file", logFile); 
+//		    PropertyConfigurator.configure(props); 
+//		 }
 
 }

@@ -1,27 +1,35 @@
 package com.klindziuk.framework;
 
+import org.apache.log4j.Logger;
+
 class CommandCheckTitle extends Command {
 	   public static final String name = "checkPageTitle";
+	   private static final Logger logger = Logger.getLogger(CommandCheckTitle.class);
 	   @Override
 	   public CommandResult run(String...params) {
 		  
 	       System.out.println("Command: " + name);
 	       validateParams(params);
-	      return new CommandResult(params[0].equals(document.title()),name + " " + "\"" + params[0] + "\"");
+	      return new CommandResult((params[0].equals(document.title()) && validateParams(params)),
+	    		  name + " " + "\"" + params[0] + "\"");
 	       
 	   }
 
 	   @Override
-	   public void validateParams(String...params) {
+	   public boolean validateParams(String...params) {
 		   if(params.length < 1) {
-			   throw new IllegalArgumentException(NOT_ENOUGH_ARGS);
+			   logger.warn(NOT_ENOUGH_ARGS + name + " " + "\"" + params[0] + "\"");
+			   return false;
 		   }
 	       if(params.length > 1){
-	    	   throw new IllegalArgumentException(TOO_MANY_ARGS);
+	    	   logger.warn(TOO_MANY_ARGS + name + " " + "\"" + params[0] + "\""); 
+	    	   return false;
 	       }
 	       if(null == document){
-	    	   throw new IllegalStateException(NULL_DOCUMENT);
+	    	   logger.warn(NULL_DOCUMENT);
+	    	   return false;
 	       }
+	       return true;
 	       
 	   }
 	}

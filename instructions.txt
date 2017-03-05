@@ -1,8 +1,7 @@
 open "http://protesting.ru/automation/" "2"  
-checkPageTitle  
-checkPageContains "Test Run" 
+checkPageTitle "1"
+checkPageContainsText 
 checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"
 fffff
 dwdwqdqqw
-""
 checkPageTitle11
