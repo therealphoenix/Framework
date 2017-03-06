@@ -1,17 +1,16 @@
 package com.klindziuk.framework.util;
 
 import java.util.regex.Pattern;
-
 import org.apache.log4j.Logger;
 
 public class CheckArguments {
 	private static final String DEFAULT_LOG_PATH_AND_NAME = CheckArguments.class.getProtectionDomain()
-			.getCodeSource().getLocation().getPath() + "TATframeworklog.txt";
+										.getCodeSource().getLocation().getPath() + "TATframeworklog.txt";
 	private static final Logger logger = Logger.getLogger(CheckArguments.class);
 	private String commandPath;
 	private String logPath;
 	
-	//check arguments size
+	//checking arguments size
 	private void checkArguments(String[] args) {
 		if (0 == args.length) {
 			System.out.println("You don't input path for commandline file.Please,try again.");
@@ -31,16 +30,14 @@ public class CheckArguments {
 		this.logPath = args[1];
 	}
 	}
-	
  	// checking input for same path for commandfile and logfile
  private void checkEqualsPath(String commandPath, String logPath){
 	if (commandPath.equals(logPath)) {
-		logger.error("You  input equals path for instructions and log file.\nLog will be printed at "
+		logger.warn("You  input equals path for instructions and log file.\nLog will be printed at "
 				+ DEFAULT_LOG_PATH_AND_NAME);
 		this.logPath = DEFAULT_LOG_PATH_AND_NAME;
 	}
  }
-
 //checking path for special symbols
 private void checkSpecialSymbols(String filePath) {
 	Pattern pattern = Pattern.compile("[$&,;=?#|'<>^*()!]");
@@ -49,7 +46,7 @@ private void checkSpecialSymbols(String filePath) {
 		System.exit(-1);
 	}
 }
-
+//checking file extensions
 private void checkFileXtension(String filePath){
 	String extension = "";
 	int i = filePath.lastIndexOf('.');
@@ -61,7 +58,7 @@ private void checkFileXtension(String filePath){
 				System.exit(-1);
 	}
 	}
-
+// full check in one method
 public  String[] FullCheck(String[] args){
 	checkArguments(args);
 	checkSpecialSymbols(commandPath);
@@ -72,11 +69,6 @@ public  String[] FullCheck(String[] args){
 	String[] pathArray = {this.commandPath,this.logPath};
 	
 	return pathArray;
-	
-	
-	
-	
 }
-
 }
 
