@@ -3,7 +3,6 @@ package com.klindziuk.framework.command;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import com.klindziuk.framework.util.CommandResult;
 
 class CommandCheckLinkHref extends Command {

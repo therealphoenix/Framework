@@ -1,7 +1,6 @@
 package com.klindziuk.framework.command;
 
 import org.apache.log4j.Logger;
-
 import com.klindziuk.framework.util.CommandResult;
 
 public class CommandCheckContainsText extends Command {
