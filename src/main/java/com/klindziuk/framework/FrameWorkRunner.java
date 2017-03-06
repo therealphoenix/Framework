@@ -2,6 +2,8 @@ package com.klindziuk.framework;
 
 import java.util.regex.Pattern;
 
+import com.klindziuk.framework.util.TotalResult;
+
 public class FrameWorkRunner {
 	protected static final String DEFAULT_LOG_PATH_AND_NAME = FrameWorkRunner.class.getProtectionDomain()
 			.getCodeSource().getLocation().getPath() + "TATframeworklog.txt";
@@ -9,9 +11,16 @@ public class FrameWorkRunner {
 	public static String logPath;
 
 	public static void main(String[] args) {
+		if (1 == args.length) {
+			System.out
+					.println("You don't input path for log file.\nLog will be printed at " + DEFAULT_LOG_PATH_AND_NAME);
+			logPath = DEFAULT_LOG_PATH_AND_NAME;
+		} else {
+			logPath = args[1];
+		}
 
 		// checking for special symbols in path
-		if (checkPathWithRegExp(args[0]) || checkPathWithRegExp(args[1])) {
+		if (checkPathWithRegExp(args[0]) || checkPathWithRegExp(logPath)) {
 			System.out.println("Don't use special symbols in path.Please, try again.");
 			System.exit(-1);
 		}
@@ -24,19 +33,13 @@ public class FrameWorkRunner {
 			System.exit(-1);
 		}
 		// checking input for same path for commandfile and logfile
-		if (args[0].equals(args[1])) {
+		if (args[0].equals(logPath)) {
 			System.out.println("You  input equals path for instructions and log file.\nLog will be printed at "
 					+ DEFAULT_LOG_PATH_AND_NAME);
 			logPath = DEFAULT_LOG_PATH_AND_NAME;
 		}
 		// if user don't input log path
-		if (1 == args.length) {
-			System.out
-					.println("You don't input path for log file.\nLog will be printed at " + DEFAULT_LOG_PATH_AND_NAME);
-			logPath = DEFAULT_LOG_PATH_AND_NAME;
-		} else {
-			logPath = args[1];
-		}
+		
 
 		CommandExecutor fe = new CommandExecutor();
 		TotalResult totalResult = new TotalResult();
@@ -46,7 +49,7 @@ public class FrameWorkRunner {
 	}
 
 	public static boolean checkPathWithRegExp(String filePath) {
-		Pattern pattern = Pattern.compile("[$&,;=?#|'<>^*()%!]");
+		Pattern pattern = Pattern.compile("[$&,;=?#|'<>^*()!]");
 		if (pattern.matcher(filePath).find()) {
 			return true;
 		}

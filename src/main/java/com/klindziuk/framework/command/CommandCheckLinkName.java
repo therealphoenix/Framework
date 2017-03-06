@@ -1,20 +1,23 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.command;
 
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-class CommandCheckLinkHref extends Command {
-	public static final String name = "checkLinkPresentByHref";
-	private static final Logger logger = Logger.getLogger(CommandCheckLinkHref.class);
+import com.klindziuk.framework.util.CommandResult;
+
+class CommandCheckLinkName extends Command {
+	public static final String name = "checkLinkPresentByName";
+	private static final Logger logger = Logger.getLogger(CommandCheckLinkName.class);
 
 	@Override
 	public CommandResult run(String... params) {
+
 		System.out.println("Command: " + name);
 		validateParams(params);
 		Elements links = document.select("a[href]");
 		for (Element link : links) {
-			if ((params[0].equals(link.attr("href"))) && (validateParams(params))) {
+			if (params[0].equals(link.text()) && (validateParams(params))) {
 				return new CommandResult(true, name + " " + "\"" + params[0] + "\"");
 			}
 		}

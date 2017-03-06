@@ -1,8 +1,8 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.command;
 
 import java.util.HashMap;
 
-enum CommandEnum {
+public enum CommandEnum {
 	
 	    open(new CommandOpen()),
 	    checkLinkPresentByHref(new CommandCheckLinkHref()),

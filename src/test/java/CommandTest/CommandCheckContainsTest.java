@@ -10,10 +10,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import com.klindziuk.framework.CommandOpen;
-import com.klindziuk.framework.CommandCheckContainsText;
-import com.klindziuk.framework.CommandResult;
-import com.klindziuk.framework.Command;
+
+import com.klindziuk.framework.command.Command;
+import com.klindziuk.framework.command.CommandCheckContainsText;
+import com.klindziuk.framework.command.CommandOpen;
+import com.klindziuk.framework.util.CommandResult;
 
 
 public class CommandCheckContainsTest {

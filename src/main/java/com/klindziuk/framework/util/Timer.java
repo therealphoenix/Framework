@@ -1,4 +1,4 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.util;
 
 
 public class Timer {

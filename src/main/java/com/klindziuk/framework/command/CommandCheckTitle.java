@@ -1,6 +1,8 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.command;
 
 import org.apache.log4j.Logger;
+
+import com.klindziuk.framework.util.CommandResult;
 
 class CommandCheckTitle extends Command {
 	public static final String name = "checkPageTitle";

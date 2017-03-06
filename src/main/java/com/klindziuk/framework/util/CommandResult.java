@@ -1,4 +1,4 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.util;
 
 import java.text.DecimalFormat;
 

@@ -7,3 +7,21 @@ Total tests: 5
 Passed/Failed: 5/0 
 Total time: 23,000 
 Average time: 4,600 
++ [open "https://jsoup.org/" "2"] 31,000
++ [checkPageTitle "jsoup Java HTML Parser, with best of DOM, CSS, and jquery"] 0,000
++ [checkPageContainsText "CSS selectors"] 0,000
++ [checkLinkPresentByHref "//try.jsoup.org/~LGB7rk_atM2roavV0d-czMt3J_g"] 0,000
++ [checkLinkPresentByName "online sample"] 0,000
+Total tests: 5  
+Passed/Failed: 5/0 
+Total time: 31,000 
+Average time: 6,200 
++ [open "https://en.wikipedia.org/wiki/Test_automation" "2"] 18,000
++ [checkPageTitle "Test automation - Wikipedia"] 0,000
++ [checkPageContainsText "Test automation tools can be expensive"] 0,000
++ [checkLinkPresentByHref "/wiki/API_testing"] 0,000
++ [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 5/0 
+Total time: 18,000 
+Average time: 3,600 

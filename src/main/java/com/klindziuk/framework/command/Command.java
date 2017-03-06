@@ -1,6 +1,9 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.command;
 
 import org.jsoup.nodes.Document;
+
+import com.klindziuk.framework.util.CommandResult;
+import com.klindziuk.framework.util.Timer;
 
 public abstract class Command {
 	public static final String name = "unknown";

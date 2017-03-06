@@ -9,6 +9,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.apache.log4j.Logger;
 
+import com.klindziuk.framework.command.Command;
+import com.klindziuk.framework.command.CommandEnum;
+import com.klindziuk.framework.util.CommandResult;
+
 public class CommandExecutor {
 	private static final Logger logger = Logger.getLogger(CommandExecutor.class);
 	private List<CommandResult> logList;

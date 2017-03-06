@@ -1,9 +1,11 @@
-package com.klindziuk.framework;
+package com.klindziuk.framework.command;
 
 import java.io.IOException;
 import org.apache.log4j.Logger;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+
+import com.klindziuk.framework.util.CommandResult;
 
 public class CommandOpen extends Command {
 	   public static final String name = "open";
