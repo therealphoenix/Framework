@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="12" passed="9">
+<testng-results skipped="0" failed="9" ignored="0" total="12" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3311" started-at="2017-03-04T17:54:50Z" finished-at="2017-03-04T17:54:53Z">
+  <suite name="Default suite" duration-ms="3553" started-at="2017-03-07T09:20:25Z" finished-at="2017-03-07T09:20:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3311" started-at="2017-03-04T17:54:50Z" finished-at="2017-03-04T17:54:53Z">
+    <test name="Default test" duration-ms="3553" started-at="2017-03-07T09:20:25Z" finished-at="2017-03-07T09:20:29Z">
       <class name="CommandTest.CommandCheckContainsTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeClass" is-config="true" duration-ms="21" started-at="2017-03-04T19:54:50Z" finished-at="2017-03-04T19:54:50Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeClass" is-config="true" duration-ms="51" started-at="2017-03-07T11:20:26Z" finished-at="2017-03-07T11:20:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="511" started-at="2017-03-04T19:54:50Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="801" started-at="2017-03-07T11:20:26Z" finished-at="2017-03-07T11:20:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="commandWithTimer_Test_NullArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_NullArguments" duration-ms="21" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="commandWithTimer_Test_NullArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_NullArguments" duration-ms="94" started-at="2017-03-07T11:20:26Z" finished-at="2017-03-07T11:20:26Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
-	at com.klindziuk.framework.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
-	at com.klindziuk.framework.Command.runWithTimer(Command.java:20)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_NullArguments(CommandCheckContainsTest.java:138)
+	at com.klindziuk.framework.command.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
+	at com.klindziuk.framework.command.Command.runWithTimer(Command.java:27)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_NullArguments(CommandCheckContainsTest.java:142)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -54,27 +54,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- commandWithTimer_Test_NullArguments -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="76" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="94" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="commandWithTimer_Test_ValidArguments_Negative()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_ValidArguments_Negative" duration-ms="12" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="FAIL" signature="commandWithTimer_Test_ValidArguments_Negative()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_ValidArguments_Negative" duration-ms="12" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [null] but found [! [checkPageContains "I think this page do not have this text"] 0,000]]]>
+              <![CDATA[expected [null] but found [! [checkPageContainsText "I think this page do not have this text"] 0,000]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [null] but found [! [checkPageContains "I think this page do not have this text"] 0,000]
+              <![CDATA[java.lang.AssertionError: expected [null] but found [! [checkPageContainsText "I think this page do not have this text"] 0,000]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:130)
 	at org.testng.Assert.assertEquals(Assert.java:116)
 	at org.testng.Assert.assertEquals(Assert.java:179)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative(CommandCheckContainsTest.java:130)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Negative(CommandCheckContainsTest.java:134)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -106,26 +106,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- commandWithTimer_Test_ValidArguments_Negative -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="113" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="88" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="commandWithTimer_Test_ValidArguments_Positive()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_ValidArguments_Positive" duration-ms="5" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="FAIL" signature="commandWithTimer_Test_ValidArguments_Positive()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_ValidArguments_Positive" duration-ms="5" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[expected [+ [checkPageContains "Software Automation Tester"] 0,000] but found [+ [checkPageContainsText "Software Automation Tester"] 0,000]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [+ [checkPageContains "Software Automation Tester"] 0,000] but found [+ [checkPageContainsText "Software Automation Tester"] 0,000]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive(CommandCheckContainsTest.java:122)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidArguments_Positive(CommandCheckContainsTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -157,25 +158,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- commandWithTimer_Test_ValidArguments_Positive -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="87" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="79" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="commandWithTimer_Test_ValidSizeParams_EmptyString()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_ValidSizeParams_EmptyString" duration-ms="4" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="FAIL" signature="commandWithTimer_Test_ValidSizeParams_EmptyString()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="commandWithTimer_Test_ValidSizeParams_EmptyString" duration-ms="2" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
+          <exception class="java.lang.ArrayIndexOutOfBoundsException">
             <message>
-              <![CDATA[Not enough parameters at: ]]>
+              <![CDATA[0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Not enough parameters at: 
-	at com.klindziuk.framework.CommandCheckContainsText.validateParams(CommandCheckContainsText.java:18)
-	at com.klindziuk.framework.CommandCheckContainsText.run(CommandCheckContainsText.java:11)
-	at com.klindziuk.framework.Command.runWithTimer(Command.java:20)
-	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:145)
+              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: 0
+	at com.klindziuk.framework.command.Command.validateParams(Command.java:35)
+	at com.klindziuk.framework.command.Command.validateParamsAndDocument(Command.java:54)
+	at com.klindziuk.framework.command.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
+	at com.klindziuk.framework.command.Command.runWithTimer(Command.java:27)
+	at CommandTest.CommandCheckContainsTest.commandWithTimer_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:149)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -203,25 +205,25 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- java.lang.ArrayIndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- commandWithTimer_Test_ValidSizeParams_EmptyString -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="75" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="68" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="run_Test_ValidSizeParams_EmptyString()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_EmptyString" duration-ms="7" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="run_Test_ValidSizeParams_EmptyString()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_EmptyString" duration-ms="6" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
-	at com.klindziuk.framework.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
-	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:81)
+	at com.klindziuk.framework.command.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_EmptyString(CommandCheckContainsTest.java:83)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -253,21 +255,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_Test_ValidSizeParams_EmptyString -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="68" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="run_Test_ValidSizeParams_NullArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_NullArguments" duration-ms="9" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="69" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="run_Test_ValidSizeParams_NullArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_NullArguments" duration-ms="7" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at java.lang.String.contains(Unknown Source)
-	at com.klindziuk.framework.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
-	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments(CommandCheckContainsTest.java:74)
+	at com.klindziuk.framework.command.CommandCheckContainsText.run(CommandCheckContainsText.java:12)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_NullArguments(CommandCheckContainsTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -299,53 +301,130 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_Test_ValidSizeParams_NullArguments -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="68" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="78" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="run_Test_ValidSizeParams_ValidArguments_Negative()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_ValidArguments_Negative" duration-ms="4" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="FAIL" signature="run_Test_ValidSizeParams_ValidArguments_Negative()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_ValidArguments_Negative" duration-ms="4" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [! [checkPageContainsText "I think this page do not have this text"] 0,000] but found [! [checkPageContains "I think this page do not have this text"] 0,000]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [! [checkPageContainsText "I think this page do not have this text"] 0,000] but found [! [checkPageContains "I think this page do not have this text"] 0,000]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_ValidArguments_Negative(CommandCheckContainsTest.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_Test_ValidSizeParams_ValidArguments_Negative -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="69" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="69" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="run_Test_ValidSizeParams_ValidArguments_Positive()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_ValidArguments_Positive" duration-ms="5" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="FAIL" signature="run_Test_ValidSizeParams_ValidArguments_Positive()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="run_Test_ValidSizeParams_ValidArguments_Positive" duration-ms="6" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [+ [checkPageContainsText "Software Automation Tester"] 0,000] but found [+ [checkPageContains "Software Automation Tester"] 0,000]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [+ [checkPageContainsText "Software Automation Tester"] 0,000] but found [+ [checkPageContains "Software Automation Tester"] 0,000]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
+	at CommandTest.CommandCheckContainsTest.run_Test_ValidSizeParams_ValidArguments_Positive(CommandCheckContainsTest.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_Test_ValidSizeParams_ValidArguments_Positive -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="1" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="65" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="69" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="validateParams_Test_NotEnoughArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_NotEnoughArguments" duration-ms="3" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="FAIL" signature="validateParams_Test_NotEnoughArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_NotEnoughArguments" duration-ms="2" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
+          <exception class="org.testng.TestException">
             <message>
-              <![CDATA[Not enough parameters at: ]]>
+              <![CDATA[
+Method CommandCheckContainsTest.validateParams_Test_NotEnoughArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.IllegalArgumentException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Not enough parameters at: 
-	at com.klindziuk.framework.CommandCheckContainsText.validateParams(CommandCheckContainsText.java:18)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_NotEnoughArguments(CommandCheckContainsTest.java:105)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+              <![CDATA[org.testng.TestException: 
+Method CommandCheckContainsTest.validateParams_Test_NotEnoughArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.IllegalArgumentException
+	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -367,33 +446,30 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.testng.TestException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateParams_Test_NotEnoughArguments -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:51Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="327" started-at="2017-03-04T19:54:51Z" finished-at="2017-03-04T19:54:52Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="65" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="validateParams_Test_Null_Document()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_Null_Document" duration-ms="1515" started-at="2017-03-04T19:54:52Z" finished-at="2017-03-04T19:54:53Z">
-          <exception class="java.lang.IllegalStateException">
+        <test-method status="FAIL" signature="validateParams_Test_Null_Document()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_Null_Document" duration-ms="1615" started-at="2017-03-07T11:20:27Z" finished-at="2017-03-07T11:20:29Z">
+          <exception class="org.testng.TestException">
             <message>
-              <![CDATA[Cannot instantiate test without opened page.]]>
+              <![CDATA[
+Method CommandCheckContainsTest.validateParams_Test_Null_Document()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.IllegalStateException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Cannot instantiate test without opened page.
-	at com.klindziuk.framework.CommandCheckContainsText.validateParams(CommandCheckContainsText.java:24)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_Null_Document(CommandCheckContainsTest.java:90)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+              <![CDATA[org.testng.TestException: 
+Method CommandCheckContainsTest.validateParams_Test_Null_Document()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.IllegalStateException
+	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -415,19 +491,19 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+          </exception> <!-- org.testng.TestException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateParams_Test_Null_Document -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="89" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="65" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="validateParams_Test_Null_params()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_Null_params" duration-ms="1" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="FAIL" signature="validateParams_Test_Null_params()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_Null_params" duration-ms="2" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <exception class="org.testng.TestException">
             <message>
               <![CDATA[
@@ -464,29 +540,26 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateParams_Test_Null_params -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="61" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="beforeMethod" is-config="true" duration-ms="72" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="validateParams_Test_ToManyArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_ToManyArguments" duration-ms="1" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="FAIL" signature="validateParams_Test_ToManyArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="validateParams_Test_ToManyArguments" duration-ms="2" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
+          <exception class="org.testng.TestException">
             <message>
-              <![CDATA[Too many parameters at: ]]>
+              <![CDATA[
+Method CommandCheckContainsTest.validateParams_Test_ToManyArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.IllegalArgumentException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Too many parameters at: 
-	at com.klindziuk.framework.CommandCheckContainsText.validateParams(CommandCheckContainsText.java:21)
-	at CommandTest.CommandCheckContainsTest.validateParams_Test_ToManyArguments(CommandCheckContainsTest.java:97)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+              <![CDATA[org.testng.TestException: 
+Method CommandCheckContainsTest.validateParams_Test_ToManyArguments()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379] should have thrown an exception of type class java.lang.IllegalArgumentException
+	at org.testng.internal.ExpectedExceptionsHolder.noException(ExpectedExceptionsHolder.java:89)
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1401)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:684)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
@@ -508,15 +581,15 @@ Method CommandCheckContainsTest.validateParams_Test_Null_params()[pri:0, instanc
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.testng.TestException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateParams_Test_ToManyArguments -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterClass" is-config="true" duration-ms="1" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-04T19:54:53Z" finished-at="2017-03-04T19:54:53Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:CommandTest.CommandCheckContainsTest@19f379]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-03-07T11:20:29Z" finished-at="2017-03-07T11:20:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

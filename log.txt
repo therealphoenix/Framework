@@ -1,8 +1,0 @@
-+ [open "http://protesting.ru/automation/" "2"] 4,000
-! [checkPageTitle "1"] 0,000
-! [checkPageContainsText ] 0,000
-! [checkLinkPresentByHref "http://top100.rambler.ru/home?id=1902383"] 0,000
-Total tests1: 4  
-Passed/Failed: 1/3 
-Total time: 4,000 
-Average time: 1,000 

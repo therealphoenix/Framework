@@ -1,41 +1,26 @@
 package com.klindziuk.framework.command;
 
-import org.apache.log4j.Logger;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import com.klindziuk.framework.util.CommandResult;
 
 class CommandCheckLinkHref extends Command {
-	public static final String name = "checkLinkPresentByHref";
-	private static final Logger logger = Logger.getLogger(CommandCheckLinkHref.class);
+
+	public static final String NAME = "checkLinkPresentByHref";
+	public static final String HREF = "href";
 
 	@Override
 	public CommandResult run(String... params) {
-		System.out.println("Command: " + name);
-		validateParams(params);
-		Elements links = document.select("a[href]");
-		for (Element link : links) {
-			if ((params[0].equals(link.attr("href"))) && (validateParams(params))) {
-				return new CommandResult(true, name + " " + "\"" + params[0] + "\"");
+		LOGGER.debug("Command: " + NAME);
+		if (validateParamsAndDocument(1, params)) {
+			Elements links = document.select("a[href]");
+			for (Element link : links) {
+
+				if (params[0].equals(link.attr(HREF))) {
+					return new CommandResult(true, NAME + " " + "\"" + params[0] + "\"");
+				}
 			}
 		}
-		return new CommandResult(false, name + " " + "\"" + params[0] + "\"");
-	}
-
-	@Override
-	public boolean validateParams(String... params) {
-		if (params.length < 1) {
-			logger.error(NOT_ENOUGH_ARGS + name + " " + "\"" + params[0] + "\"");
-			return false;
-		}
-		if (params.length > 1) {
-			logger.error(TOO_MANY_ARGS + name + " " + "\"" + params[0] + "\"");
-			return false;
-		}
-		if (null == document) {
-			logger.error(NULL_DOCUMENT);
-			return false;
-		}
-		return true;
+		return new CommandResult(false, NAME + " " + "\"" + params[0] + "\"");
 	}
 }

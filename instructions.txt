@@ -3,6 +3,7 @@ checkPageTitle "Test automation - Wikipedia"
 checkPageContainsText  "Test automation tools can be expensive"
 checkLinkPresentByHref "/wiki/API_testing" 
 checkLinkPresentByName "API driven testing"
+
 fffff
 dwdwqdqqw
 checkPageTitle11

@@ -5,13 +5,19 @@
     <classes>
       <class name="CommandTest.CommandCheckContainsTest">
         <methods>
-          <include name="validateParams_Test_Null_params"/>
           <include name="afterClass"/>
           <include name="commandWithTimer_Test_ValidArguments_Positive"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="commandWithTimer_Test_ValidArguments_Negative"/>
+          <include name="commandWithTimer_Test_ValidSizeParams_EmptyString"/>
+          <include name="validateParams_Test_Null_Document"/>
+          <include name="run_Test_ValidSizeParams_ValidArguments_Positive"/>
           <include name="beforeClass"/>
+          <include name="validateParams_Test_Null_params"/>
+          <include name="afterMethod"/>
+          <include name="run_Test_ValidSizeParams_ValidArguments_Negative"/>
+          <include name="beforeMethod"/>
+          <include name="validateParams_Test_ToManyArguments"/>
+          <include name="commandWithTimer_Test_ValidArguments_Negative"/>
+          <include name="validateParams_Test_NotEnoughArguments"/>
         </methods>
       </class> <!-- CommandTest.CommandCheckContainsTest -->
     </classes>

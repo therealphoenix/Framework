@@ -3,7 +3,7 @@ package com.klindziuk.framework.util;
 import java.text.DecimalFormat;
 
 public class CommandResult {
-	String format = "#0.000";
+	public static final String format = "#0.000";
 		
 	private boolean result;
 	private String command;
@@ -12,18 +12,18 @@ public class CommandResult {
 	public CommandResult(boolean result, String command) {
 		this.result = result;
 		this.command = command;
-		
 	}
-	public CommandResult(boolean result, String command,float time) {
-		this.result = result;
-		this.command = command;
-		this.time = time;
-		
-	}
-		public void setTime(float time) {
+
+	public CommandResult(boolean result, String command, float time) {
+		this(result, command);
 		this.time = time;
 	}
-	public boolean isResult() {
+
+	public void setTime(float time) {
+		this.time = time;
+	}
+
+	public boolean isPassed() {
 		return result;
 	}
 

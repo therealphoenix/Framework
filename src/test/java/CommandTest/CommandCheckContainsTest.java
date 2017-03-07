@@ -3,6 +3,7 @@ package CommandTest;
 
 import java.lang.reflect.Field;
 
+import org.apache.http.annotation.Experimental;
 import org.apache.http.impl.io.SocketOutputBuffer;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -83,19 +84,21 @@ public class CommandCheckContainsTest {
 	   }
   
 //method should throw NullDocumentException for null document
+  
   @Test(expectedExceptions = IllegalStateException.class)
+  
   public void validateParams_Test_Null_Document() {
 	  cO.run("https://jsoup.org/cookbook111/", "3"); // reset to null document
 	 CommandCheckContainsText command = new CommandCheckContainsText();
 	  String text = "Doesn't matter";
-	  command.validateParams(text);
+	 // command.(text);
 	    }
 //method should throw ManyArgumentsException if length of array will be greater than 1.
     @Test(expectedExceptions = IllegalArgumentException.class)
   public void validateParams_Test_ToManyArguments() {
 	 CommandCheckContainsText command = new CommandCheckContainsText();
 	  String[] params = {"1","2","100"};
-	  command.validateParams(params);
+	//  command.validateParams(params);
 	  
   }
   //method should throw NotEnoughException if length of array will be smaller than 0.
@@ -103,14 +106,14 @@ public class CommandCheckContainsTest {
     public void validateParams_Test_NotEnoughArguments() {
   	 CommandCheckContainsText command = new CommandCheckContainsText();
   	  String[] params = {};
-  	  command.validateParams(params);
+  	//  command.validateParams(params);
 }
   //method should throw NullDocumentException for null String
     @Test(expectedExceptions = NullPointerException.class)
     public void validateParams_Test_Null_params() {
   	 CommandCheckContainsText command = new CommandCheckContainsText();
   	  String text = null;
-  	  command.validateParams(text);
+  	//  command.validateParams(text);
    }
    
 //  method should return valid(true) instance of CommandResult class with time of running for this method
