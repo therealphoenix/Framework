@@ -18,7 +18,7 @@ public class FrameWorkRunner {
 		LoggerUtils.updateLog4jConfiguration(parameters[1]);
 		try {
 			CommandExecutor fe = new CommandExecutor();
-			List<CommandResult> listOfResults = fe.execute(args[0]);
+			List<CommandResult> listOfResults = fe.execute(parameters[0]);
 			TotalResult.printResult(listOfResults);
 		} catch (FileNotFoundException e) {
 			LOGGER.error("System can not find open this file. Try again", e);

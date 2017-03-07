@@ -20,4 +20,9 @@ class CommandCheckLinkName extends Command {
 		}
 		return new CommandResult(false, NAME + " " + "\"" + params[0] + "\"");
 	}
+	
+	@Override
+	String getName() {
+		return NAME;
+	}
 }

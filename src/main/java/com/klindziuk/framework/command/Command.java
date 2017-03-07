@@ -9,18 +9,15 @@ import com.klindziuk.framework.util.Timer;
 public abstract class Command {
 
 	protected static final Logger LOGGER = Logger.getLogger(Command.class);
-
-	public static final String NAME = "unknown";
-	public static final String TOO_MANY_ARGS = "Too many parameters at: ";
+	public static final String TOO_MANY_ARGS = "Too many parameters at command: ";
 	public static final String NOT_ENOUGH_ARGS = "Not enough parameters at: ";
 	public static final String NULL_DOCUMENT = "Cannot instantiate test without opened page.";
-
 	protected static Document document;
-
 	protected Timer timer = new Timer();
 
 	abstract CommandResult run(String... params);
-
+	abstract String getName();
+	
 	public CommandResult runWithTimer(String... params) {
 		Timer timer = new Timer();
 		timer.start();
@@ -32,11 +29,11 @@ public abstract class Command {
 
 	protected boolean validateParams(int length, String...params) {
 		if(params.length < length) {
-			LOGGER.error(NOT_ENOUGH_ARGS + NAME + " " + "\"" + params[0] + "\"");
+	//		LOGGER.error(NOT_ENOUGH_ARGS + getName() + " " + "\"" + params[0] + "\"");
 			return false;
 		}
 		if(params.length > length){
-			LOGGER.error(TOO_MANY_ARGS + NAME + " " + "\"" + params[0] + "\"");
+			LOGGER.error(TOO_MANY_ARGS + "\"" + getName() + "\"");
 			return false;
 		}
 		return true;
@@ -44,14 +41,14 @@ public abstract class Command {
 
 	protected boolean validateNullDocument() {
 		if (null == document) {
-			LOGGER.error(NULL_DOCUMENT);
+			LOGGER.error(getName() + ": " + NULL_DOCUMENT);
 			return false;
 		}
 		return true;
 	}
 
 	protected boolean validateParamsAndDocument(int length, String...params) {
-		return validateParams(length, params) && validateNullDocument();
+		return validateNullDocument() && validateParams(length, params);
 	}
 
 }

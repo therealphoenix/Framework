@@ -35,16 +35,18 @@ public class CommandExecutor {
             }
 
             if (listOfCommands.isEmpty()) {
-                LOGGER.warn("Line:"+lineNumber + " at command file is empty." );
+                LOGGER.warn("Line:" + lineNumber + " at command file is empty." );
                 continue;
             }
-            
             
             String methodname = listOfCommands.get(0);
             CommandResult cr = new CommandResult(false, commandLine, Timer.RESET_TIME);
             try {
+            	
+            	//making an array of method parameters
+            	String[] params = listOfCommands.size() == 1 ? new String[]{} :
+                    listOfCommands.subList(1, listOfCommands.size()).toArray(new String[]{});
 
-            	String[] params = setParameters(listOfCommands);
                 Command command = CommandEnum.getCommandByName(methodname);
                 if (command == null) {
                     LOGGER.error("Unfortunately we don't support test for \"" + methodname + "\".");
@@ -52,21 +54,16 @@ public class CommandExecutor {
                 }
                 cr = command.runWithTimer(params);
                 logList.add(cr);
+                
+                // if command line in file don't contains enough quantity of parameters - test failed
             } catch (IndexOutOfBoundsException iobex) {
+            	logList.add(cr);
                 LOGGER.error(Command.NOT_ENOUGH_ARGS + commandLine + "(" + file.getName() + ":" + lineNumber
                         + "). Test with this command failed.");
-            } 
+            }  
         }
         scanner.close();
-
         return logList;
     }
-    
-    private String[] setParameters(List<String> list) {
-		String[] array = new String[list.size() - 1];
-		list.remove(0);
-		array = list.toArray(array);
-		return array;
-	}
-
+   
 }

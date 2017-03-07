@@ -12,5 +12,10 @@ public class CommandCheckContainsText extends Command {
 		boolean result = validateParamsAndDocument(1, params) && document.toString().contains(params[0]);
 		return new CommandResult(result, NAME + " " + "\"" + params[0] + "\"");
 	}
+	
+	@Override
+	String getName() {
+		return NAME;
+	}
 
 }

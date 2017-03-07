@@ -1,5 +1,5 @@
-open "https://en.wikipedia.org/wiki/Test_automation" "2"  
-checkPageTitle "Test automation - Wikipedia"
+open "https://en.wikipedia.org/wiki/Test_automation" "3"   
+checkPageTitle "2" "2" "2"
 checkPageContainsText  "Test automation tools can be expensive"
 checkLinkPresentByHref "/wiki/API_testing" 
 checkLinkPresentByName "API driven testing"

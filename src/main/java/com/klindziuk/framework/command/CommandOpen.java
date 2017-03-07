@@ -1,7 +1,6 @@
 package com.klindziuk.framework.command;
 
 import java.io.IOException;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 
@@ -33,4 +32,9 @@ public class CommandOpen extends Command {
         document = null;
         return new CommandResult(false, NAME + " " + "\"" + params[0] + "\"" + "\"" + params[1] + "\"");
     }
+    
+    @Override
+	String getName() {
+		return NAME;
+	}
 }

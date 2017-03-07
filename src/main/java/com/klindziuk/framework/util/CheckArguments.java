@@ -1,12 +1,11 @@
 package com.klindziuk.framework.util;
 
 import java.util.regex.Pattern;
-
 import org.apache.log4j.Logger;
 
 public class CheckArguments {
     private static final String DEFAULT_LOG_PATH_AND_NAME = CheckArguments.class.getProtectionDomain()
-            .getCodeSource().getLocation().getPath() + "TATframeworklog.txt";
+            .getCodeSource().getLocation().getPath() + "TATframeworklog.log";
     private static final Logger LOGGER = Logger.getLogger(CheckArguments.class);
 
     private String commandPath;
@@ -78,7 +77,7 @@ public class CheckArguments {
 
     /**
      * full check in one method
-     *
+     * 
      */
     public String[] FullCheck(String[] args) {
         checkArguments(args);

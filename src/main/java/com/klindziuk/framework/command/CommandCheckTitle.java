@@ -9,7 +9,12 @@ class CommandCheckTitle extends Command {
 	@Override
 	public CommandResult run(String... params) {
 		LOGGER.debug("Command: " + NAME);
-		return new CommandResult(validateParams(1, params) && params[0].equals(document.title()),
+		return new CommandResult(validateParamsAndDocument(1, params) && params[0].equals(document.title()),
 				NAME + " " + "\"" + params[0] + "\"");
+	}
+	
+	@Override
+	String getName() {
+		return NAME;
 	}
 }
