@@ -14,11 +14,11 @@ class CommandCheckLinkName extends Command {
 			Elements links = document.select("a[href]");
 			for (Element link : links) {
 				if (params[0].equals(link.text())) {
-					return new CommandResult(true, NAME + " " + "\"" + params[0] + "\"");
+					return new CommandResult(true, NAME + buildParamsString(params));
 				}
 			}
 		}
-		return new CommandResult(false, NAME + " " + "\"" + params[0] + "\"");
+		return new CommandResult(false, NAME  + buildParamsString(params));
 	}
 	
 	@Override

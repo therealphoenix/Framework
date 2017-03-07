@@ -10,7 +10,7 @@ public class CommandCheckContainsText extends Command {
 	public CommandResult run(String... params) {
 		LOGGER.debug("Command: " + NAME);
 		boolean result = validateParamsAndDocument(1, params) && document.toString().contains(params[0]);
-		return new CommandResult(result, NAME + " " + "\"" + params[0] + "\"");
+		return new CommandResult(result, NAME  + buildParamsString(params));
 	}
 	
 	@Override

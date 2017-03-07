@@ -20,7 +20,7 @@ public class CommandOpen extends Command {
                 Connection.Response response = Jsoup.connect(params[0]).timeout(CONNECTION_TIMEOUT_MS).execute();
                 if (200 == response.statusCode()) {
                     document = response.parse();
-                    return new CommandResult(true, NAME + " " + "\"" + params[0] + "\"" + " \"" + params[1] + "\"");
+                    return new CommandResult(true, NAME  + buildParamsString(params));
                 }
             } catch (IOException e) {
                 LOGGER.error("Unfortunately we can't read the response from " + "\"" + params[0] + "\"", e);
@@ -30,7 +30,7 @@ public class CommandOpen extends Command {
             }
         }
         document = null;
-        return new CommandResult(false, NAME + " " + "\"" + params[0] + "\"" + "\"" + params[1] + "\"");
+        return new CommandResult(false, NAME  + buildParamsString(params));
     }
     
     @Override

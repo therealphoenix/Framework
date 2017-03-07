@@ -70,3 +70,102 @@ Total tests: 5
 Passed/Failed: 4/1 
 Total time: 19,000 
 Average time: 3,800 
++ [open "https://en.wikipedia.org/wiki/Test_automation" "3"] 18,000
+! [checkPageTitle "2"] 0,000
++ [checkPageContainsText "Test automation tools can be expensive"] 0,000
++ [checkLinkPresentByHref "/wiki/API_testing"] 0,000
++ [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 4/1 
+Total time: 18,000 
+Average time: 3,600 
++ [open "https://en.wikipedia.org/wiki/Test_automation" "3"] 17,000
+! [checkPageTitle "2"] 0,000
+! [checkPageContainsText  ] 0,000
++ [checkLinkPresentByHref "/wiki/API_testing"] 0,000
++ [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 3/2 
+Total time: 17,000 
+Average time: 3,400 
+! [open "https://en.wikipedia.org/wiki/Test_automation"    ] 0,000
+! [checkPageTitle "2"] 0,000
+! [checkPageContainsText  ] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "https://en.wikipedia.org/wiki/Test_automation"    ] 0,000
+! [checkPageTitle "2"] 0,000
+! [checkPageContainsText  ] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open"https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle"2" "2" "2"] 0,000
+! [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"/wiki/API_testing"] 0,000
+! [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open"https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle"2" "2" "2"] 0,000
+! [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"/wiki/API_testing"] 0,000
+! [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open"https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle"2" "2" "2"] 0,000
+! [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"/wiki/API_testing"] 0,000
+! [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open"https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle"2" "2" "2"] 0,000
+! [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"/wiki/API_testing"] 0,000
+! [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open"https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle"2" "2" "2"] 0,000
+! [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"/wiki/API_testing"] 0,000
+! [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 

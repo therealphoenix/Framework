@@ -1,4 +1,4 @@
-open "https://en.wikipedia.org/wiki/Test_automation" "3"   
+open "https://en.wikipedia.org/wiki/Test_automation"
 checkPageTitle "2" "2" "2"
 checkPageContainsText  "Test automation tools can be expensive"
 checkLinkPresentByHref "/wiki/API_testing" 

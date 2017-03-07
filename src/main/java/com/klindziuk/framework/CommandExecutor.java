@@ -41,7 +41,7 @@ public class CommandExecutor {
             
             String methodname = listOfCommands.get(0);
             CommandResult cr = new CommandResult(false, commandLine, Timer.RESET_TIME);
-            try {
+           
             	
             	//making an array of method parameters
             	String[] params = listOfCommands.size() == 1 ? new String[]{} :
@@ -54,13 +54,7 @@ public class CommandExecutor {
                 }
                 cr = command.runWithTimer(params);
                 logList.add(cr);
-                
-                // if command line in file don't contains enough quantity of parameters - test failed
-            } catch (IndexOutOfBoundsException iobex) {
-            	logList.add(cr);
-                LOGGER.error(Command.NOT_ENOUGH_ARGS + commandLine + "(" + file.getName() + ":" + lineNumber
-                        + "). Test with this command failed.");
-            }  
+                                               
         }
         scanner.close();
         return logList;

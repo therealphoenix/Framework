@@ -26,14 +26,22 @@ public abstract class Command {
 		cr.setTime(timer.getTestTime());
 		return cr;
 	}
+	
+	public String buildParamsString(String...params) {
+		StringBuilder builder = new StringBuilder();
+		for (String param: params) {
+			builder.append("\"").append(param).append("\"").append(" ");
+		}
+		return builder.toString().trim();
+	}
 
 	protected boolean validateParams(int length, String...params) {
 		if(params.length < length) {
-	//		LOGGER.error(NOT_ENOUGH_ARGS + getName() + " " + "\"" + params[0] + "\"");
+			LOGGER.error(NOT_ENOUGH_ARGS +"[" + getName() + " " + buildParamsString(params) + "]");
 			return false;
 		}
 		if(params.length > length){
-			LOGGER.error(TOO_MANY_ARGS + "\"" + getName() + "\"");
+			LOGGER.error(TOO_MANY_ARGS + "[" + getName() + " " + buildParamsString(params) + "]");
 			return false;
 		}
 		return true;

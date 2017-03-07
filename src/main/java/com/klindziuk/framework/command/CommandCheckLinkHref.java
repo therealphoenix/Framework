@@ -17,11 +17,11 @@ class CommandCheckLinkHref extends Command {
 			for (Element link : links) {
 
 				if (params[0].equals(link.attr(HREF))) {
-					return new CommandResult(true, NAME + " " + "\"" + params[0] + "\"");
+					return new CommandResult(true, NAME + buildParamsString(params));
 				}
 			}
 		}
-		return new CommandResult(false, NAME + " " + "\"" + params[0] + "\"");
+		return new CommandResult(false, NAME  + buildParamsString(params));
 	}
 	
 	@Override
