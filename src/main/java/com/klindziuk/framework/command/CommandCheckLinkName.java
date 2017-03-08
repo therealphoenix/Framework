@@ -9,12 +9,12 @@ import com.klindziuk.framework.util.CommandResult;
  *
  */
 class CommandCheckLinkName extends Command {
-
+ 
+	public static final String NAME = "checkLinkPresentByName";
+	
 	public CommandCheckLinkName() {
 		super("checkLinkPresentByName");
 	}
-
-	public static final String NAME = "checkLinkPresentByName";
 
 	@Override
 	public CommandResult run(String... params) {
