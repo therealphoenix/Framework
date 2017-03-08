@@ -3,7 +3,7 @@ package com.klindziuk.framework.command;
 import com.klindziuk.framework.util.CommandResult;
 
 /**
- * using for performing command "checkPageContainsText"
+ * Using for performing command "checkPageContainsText"
  *
  */
 public class CommandCheckContainsText extends Command {

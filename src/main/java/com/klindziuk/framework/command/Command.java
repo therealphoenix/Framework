@@ -2,7 +2,6 @@ package com.klindziuk.framework.command;
 
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
-
 import com.klindziuk.framework.util.CommandResult;
 import com.klindziuk.framework.util.Timer;
 
@@ -24,8 +23,7 @@ public abstract class Command {
 		this.name = name;
 		this.timer = new Timer();
 	}
-
-	/**
+		/**
 	 * execution of test command
 	 * 
 	 * @param params
@@ -81,7 +79,6 @@ public abstract class Command {
 		}
 		return true;
 	}
-
 	/**
 	 * validation existing of document
 	 */

@@ -5,7 +5,7 @@ import org.jsoup.select.Elements;
 import com.klindziuk.framework.util.CommandResult;
 
 /**
- * using for performing command "checkLinkPresentByName"
+ * Using for performing command "checkLinkPresentByName"
  *
  */
 class CommandCheckLinkName extends Command {

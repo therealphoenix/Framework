@@ -5,7 +5,7 @@ import org.jsoup.select.Elements;
 import com.klindziuk.framework.util.CommandResult;
 
 /**
- * using for performing command "checkLinkPresentByHref"
+ * Using for performing command "checkLinkPresentByHref"
  *
  */
 class CommandCheckLinkHref extends Command {

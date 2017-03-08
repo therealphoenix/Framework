@@ -3,7 +3,7 @@ package com.klindziuk.framework.command;
 import com.klindziuk.framework.util.CommandResult;
 
 /**
- * using for performing command "checkPageTitle"
+ * Using for performing command "checkPageTitle"
  *
  */
 class CommandCheckTitle extends Command {
