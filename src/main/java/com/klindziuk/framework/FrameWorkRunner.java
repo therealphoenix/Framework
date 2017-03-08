@@ -9,6 +9,10 @@ import org.apache.log4j.Logger;
 import java.io.FileNotFoundException;
 import java.util.List;
 
+/**
+ * using for run framework 
+ *
+ */
 public class FrameWorkRunner {
 	private static final Logger LOGGER = Logger.getLogger(FrameWorkRunner.class);
 

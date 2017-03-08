@@ -2,6 +2,10 @@ package com.klindziuk.framework.util;
 
 import java.text.DecimalFormat;
 
+/**
+ * Result of command execution
+ *
+ */
 public class CommandResult {
 	public static final String format = "#0.000";
 		

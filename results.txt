@@ -169,3 +169,120 @@ Total tests: 5
 Passed/Failed: 0/5 
 Total time: 0,000 
 Average time: 0,000 
+! [open"https://en.wikipedia.org/wiki/Test_automation"] 0,000
+! [checkPageTitle"2" "2" "2"] 0,000
+! [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"fake_fake_fake"] 0,000
+! [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
++ [open"https://en.wikipedia.org/wiki/Test_automation" "2"] 26,000
+! [checkPageTitle"2" "2" "2"] 0,000
++ [checkPageContainsText"Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref"fake_fake_fake"] 0,000
++ [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 3/2 
+Total time: 26,000 
+Average time: 5,200 
++ [open"https://en.wikipedia.org/wiki/Test_automation" "2"] 21,000
+! [checkPageTitle"2" "2" "2"] 0,000
++ [checkPageContainsText"Test automation tools can be expensive"] 0,000
++ [checkLinkPresentByHref"/wiki/API_testing"] 0,000
++ [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 4/1 
+Total time: 21,000 
+Average time: 4,200 
++ [open"https://en.wikipedia.org/wiki/Test_automation" "2"] 16,000
+! [checkPageTitle"2" "2" "2"] 0,000
++ [checkPageContainsText"Test automation tools can be expensive"] 0,000
++ [checkLinkPresentByHref"/wiki/API_testing"] 0,000
++ [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 4/1 
+Total time: 16,000 
+Average time: 3,200 
++ [open"https://en.wikipedia.org/wiki/Test_automation" "2"] 16,000
+! [checkPageTitle"2" "2" "2"] 0,000
++ [checkPageContainsText"Test automation tools can be expensive"] 0,000
++ [checkLinkPresentByHref"/wiki/API_testing"] 0,000
++ [checkLinkPresentByName"API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 4/1 
+Total time: 16,000 
+Average time: 3,200 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 

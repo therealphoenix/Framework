@@ -12,6 +12,10 @@ public class LoggerUtils {
 
     private static final Logger LOGGER = Logger.getLogger(TotalResult.class);
 
+    /**
+     * Changing path for output log file 
+     * @param logFile
+     */
     public static void updateLog4jConfiguration(String logFile) {
         Properties props = new Properties();
         try {

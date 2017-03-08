@@ -3,6 +3,10 @@ package com.klindziuk.framework.util;
 import java.util.List;
 import org.apache.log4j.Logger;
 
+/**
+ * Calculating total result of executed tests
+ * 
+ */
 public class TotalResult {
 	
 	private static final Logger LOGGER = Logger.getLogger(TotalResult.class);

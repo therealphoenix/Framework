@@ -1,5 +1,9 @@
 package com.klindziuk.framework.util;
 
+/**
+ * Class for time calculation of command execution
+ *
+ */
 public class Timer {
 	public static final int RESET_TIME = 0;
 
