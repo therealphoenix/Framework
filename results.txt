@@ -295,3 +295,21 @@ Total tests: 5
 Passed/Failed: 0/5 
 Total time: 0,000 
 Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 
+! [open "1111" "2"] 0,000
+! [checkPageTitle "2" "2" "2"] 0,000
+! [checkPageContainsText "Test automation tools can be expensive"] 0,000
+! [checkLinkPresentByHref "/wiki/API_testing"] 0,000
+! [checkLinkPresentByName "API driven testing"] 0,000
+Total tests: 5  
+Passed/Failed: 0/5 
+Total time: 0,000 
+Average time: 0,000 

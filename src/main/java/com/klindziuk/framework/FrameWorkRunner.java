@@ -10,7 +10,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
- * using for run framework 
+ * using for run framework
  *
  */
 public class FrameWorkRunner {
@@ -29,6 +29,4 @@ public class FrameWorkRunner {
 			System.exit(1);
 		}
 	}
-
-	
 }

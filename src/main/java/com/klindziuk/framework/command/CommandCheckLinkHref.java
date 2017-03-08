@@ -9,13 +9,12 @@ import com.klindziuk.framework.util.CommandResult;
  *
  */
 class CommandCheckLinkHref extends Command {
-
+	
+	public static final String HREF = "href";
+	
 	public CommandCheckLinkHref() {
 		super("checkLinkPresentByHref");
-		
-	}
-
-	public static final String HREF = "href";
+		}
 
 	@Override
 	public CommandResult run(String... params) {

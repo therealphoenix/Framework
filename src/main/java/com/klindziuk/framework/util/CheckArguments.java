@@ -7,7 +7,6 @@ public class CheckArguments {
     private static final String DEFAULT_LOG_PATH_AND_NAME = CheckArguments.class.getProtectionDomain()
             .getCodeSource().getLocation().getPath() + "TATframeworklog.log";
     private static final Logger LOGGER = Logger.getLogger(CheckArguments.class);
-
     private String commandPath;
     private String logPath;
 

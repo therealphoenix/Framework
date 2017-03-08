@@ -26,8 +26,7 @@ public class CommandExecutor {
 		File file = new File(importFile);
 		Scanner scanner = new Scanner(file);
 		int lineNumber = 0;
-		
-		//parsing line from file
+		// parsing line from file
 		while (scanner.hasNextLine()) {
 			String commandLine = scanner.nextLine();
 			lineNumber++;
@@ -41,26 +40,20 @@ public class CommandExecutor {
 				LOGGER.warn("Line:" + lineNumber + " at command file is empty.");
 				continue;
 			}
-
 			String methodname = listOfCommands.get(0);
 			CommandResult cr = new CommandResult(false, commandLine, Timer.RESET_TIME);
-
-			// making an array of method parameters 
+			// making an array of method parameters
 			String[] params = listOfCommands.size() == 1 ? new String[] {}
 					: listOfCommands.subList(1, listOfCommands.size()).toArray(new String[] {});
-
 			Command command = CommandEnum.getCommandByName(methodname);
-			
 			if (command == null) {
 				LOGGER.error("Unfortunately we don't support test for \"" + methodname + "\".");
 				continue;
 			}
 			cr = command.runWithTimer(params);
 			logList.add(cr);
-
 		}
 		scanner.close();
 		return logList;
 	}
-
 }

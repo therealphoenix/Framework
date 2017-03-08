@@ -7,12 +7,11 @@ import com.klindziuk.framework.util.CommandResult;
 import com.klindziuk.framework.util.Timer;
 
 /**
- *  Abstract superclass for command classes
+ * Abstract superclass for command classes
  *
  */
 public abstract class Command {
-	
-	
+
 	protected static final Logger LOGGER = Logger.getLogger(Command.class);
 	public static final String TOO_MANY_ARGS = "Too many parameters at command: ";
 	public static final String NOT_ENOUGH_ARGS = "Not enough parameters at: ";
@@ -20,26 +19,26 @@ public abstract class Command {
 	protected static Document document;
 	private String name;
 	private Timer timer;
-	
-	public Command(String name){
+
+	public Command(String name) {
 		this.name = name;
 		this.timer = new Timer();
 	}
-	
+
 	/**
 	 * execution of test command
+	 * 
 	 * @param params
 	 * @return
 	 */
 	abstract CommandResult run(String... params);
-	
-	
-	public void resetTimer(){
+
+	public void resetTimer() {
 		timer.resetTime();
 	}
-	
 	/**
 	 * run command and calculating time of execution
+	 * 
 	 * @param params
 	 * @return instance of CommandResult class
 	 */
@@ -51,32 +50,32 @@ public abstract class Command {
 		cr.setTime(timer.getTestTime());
 		return cr;
 	}
-		
 	/**
 	 * making string of parameters
+	 * 
 	 * @param params
 	 * @return String with parameters
 	 */
-	public String buildParamsString(String...params) {
+	public String buildParamsString(String... params) {
 		StringBuilder builder = new StringBuilder();
-		for (String param: params) {
+		for (String param : params) {
 			builder.append("\"").append(param).append("\"").append(" ");
 		}
 		return builder.toString().trim();
 	}
-
 	/**
 	 * validation of parameters
+	 * 
 	 * @param length
 	 * @param params
 	 * @return result of validation
 	 */
-	protected boolean validateParams(int length, String...params) {
-		if(params.length < length) {
-			LOGGER.error(NOT_ENOUGH_ARGS +"[" + getName() + " " + buildParamsString(params) + "]");
+	protected boolean validateParams(int length, String... params) {
+		if (params.length < length) {
+			LOGGER.error(NOT_ENOUGH_ARGS + "[" + getName() + " " + buildParamsString(params) + "]");
 			return false;
 		}
-		if(params.length > length){
+		if (params.length > length) {
 			LOGGER.error(TOO_MANY_ARGS + "[" + getName() + " " + buildParamsString(params) + "]");
 			return false;
 		}
@@ -94,13 +93,11 @@ public abstract class Command {
 		return true;
 	}
 
-	protected boolean validateParamsAndDocument(int length, String...params) {
+	protected boolean validateParamsAndDocument(int length, String... params) {
 		return validateNullDocument() && validateParams(length, params);
 	}
-	
+
 	public String getName() {
 		return this.name;
 	}
-	
-
 }

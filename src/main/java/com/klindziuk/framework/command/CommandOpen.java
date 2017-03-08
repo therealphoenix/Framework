@@ -7,7 +7,7 @@ import com.klindziuk.framework.util.CommandResult;
 
 
 /**
- * using for performing command "open"
+ * Using for performing command "open"
  *
  */
 public class CommandOpen extends Command {
@@ -31,8 +31,7 @@ public class CommandOpen extends Command {
                     document = response.parse();
                     return new CommandResult(true, getName()  + buildParamsString(params));
                 }
-               
-            } catch (IOException e) {
+             } catch (IOException e) {
                 LOGGER.error("Unfortunately we can't read the response from " + "\"" + params[0] + "\"");
                 // handling MalformetURLException, because "Connection" re-thows MalformetURLException to IllegalArgumentException
             } catch (IllegalArgumentException ieax) {
@@ -43,6 +42,4 @@ public class CommandOpen extends Command {
         document = null;
         return new CommandResult(false, getName() + " " + buildParamsString(params));
     }
-    
-  
-}
+  }

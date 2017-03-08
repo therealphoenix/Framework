@@ -28,6 +28,6 @@ public class Timer {
 	}
 
 	public long getTestTime() {
-		return (this.stopTime - this.startTime) / 100000000; // convert from nanoseconds to seconds
+		return (this.stopTime - this.startTime) / 1000000000; // convert from nanoseconds to seconds
 	}
 }
