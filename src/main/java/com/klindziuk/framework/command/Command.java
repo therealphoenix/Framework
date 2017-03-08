@@ -23,7 +23,8 @@ public abstract class Command {
 		this.name = name;
 		this.timer = new Timer();
 	}
-		/**
+	
+	/**
 	 * execution of test command
 	 * 
 	 * @param params
@@ -34,6 +35,7 @@ public abstract class Command {
 	public void resetTimer() {
 		timer.resetTime();
 	}
+	
 	/**
 	 * run command and calculating time of execution
 	 * 
@@ -48,6 +50,7 @@ public abstract class Command {
 		cr.setTime(timer.getTestTime());
 		return cr;
 	}
+	
 	/**
 	 * making string of parameters
 	 * 
@@ -61,6 +64,7 @@ public abstract class Command {
 		}
 		return builder.toString().trim();
 	}
+	
 	/**
 	 * validation of parameters
 	 * 
@@ -78,7 +82,8 @@ public abstract class Command {
 			return false;
 		}
 		return true;
-	}
+	} 
+	
 	/**
 	 * validation existing of document
 	 */
