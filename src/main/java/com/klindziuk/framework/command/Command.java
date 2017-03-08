@@ -19,7 +19,12 @@ public abstract class Command {
 	public static final String NULL_DOCUMENT = "Cannot instantiate test without opened page.";
 	protected static Document document;
 	private String name;
-	private Timer timer ;
+	private Timer timer;
+	
+	public Command(String name){
+		this.name = name;
+		this.timer = new Timer();
+	}
 	
 	/**
 	 * execution of test command
@@ -28,19 +33,11 @@ public abstract class Command {
 	 */
 	abstract CommandResult run(String... params);
 	
-	public Command(String name){
-		this.name = name;
-		this.timer = new Timer();
-	}
 	
 	public void resetTimer(){
 		timer.resetTime();
 	}
 	
-	public String getName() {
-		return this.name;
-	}
-		
 	/**
 	 * run command and calculating time of execution
 	 * @param params
@@ -100,5 +97,10 @@ public abstract class Command {
 	protected boolean validateParamsAndDocument(int length, String...params) {
 		return validateNullDocument() && validateParams(length, params);
 	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
 
 }

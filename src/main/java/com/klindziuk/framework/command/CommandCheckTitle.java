@@ -7,7 +7,11 @@ import com.klindziuk.framework.util.CommandResult;
  *
  */
 class CommandCheckTitle extends Command {
-
+	
+	public CommandCheckTitle() {
+		super("checkPageTitle");
+		
+	}
 	@Override
 	public CommandResult run(String... params) {
 		LOGGER.debug("Command: " + getName());
@@ -15,8 +19,4 @@ class CommandCheckTitle extends Command {
 				getName() + " "  + buildParamsString(params));
 	}
 	
-	public CommandCheckTitle() {
-		super("checkPageTitle");
-		
-	}
 }

@@ -11,6 +11,10 @@ import com.klindziuk.framework.util.CommandResult;
  *
  */
 public class CommandOpen extends Command {
+	
+	 public CommandOpen() {
+		   super("open");
+	   }
 
 	@Override
     public CommandResult run(String... params) {
@@ -40,8 +44,5 @@ public class CommandOpen extends Command {
         return new CommandResult(false, getName() + " " + buildParamsString(params));
     }
     
-   public CommandOpen() {
-	   super("open");
-	   
-   }
+  
 }
