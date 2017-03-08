@@ -5,7 +5,6 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import com.klindziuk.framework.util.CommandResult;
 
-
 /**
  * Using for performing command "open"
  *
