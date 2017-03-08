@@ -30,7 +30,7 @@ public class TotalResult {
 		LOGGER.info(String.format("Total tests: %s  ", logList.size()));
 		LOGGER.info(String.format("Passed/Failed: %d/%d ", passedTestQuantity, failedTestQuantity));
 		LOGGER.info(String.format("Total time: %.3f ", fullTimeOfTests));
-		LOGGER.info(String.format("Average time: %.3f ", logList.isEmpty()  ? 0
+		LOGGER.info(String.format("Average time: %.3f ", logList.size() == 0  ? 0
 		:  fullTimeOfTests / quantityOfTests));
 	}
 
