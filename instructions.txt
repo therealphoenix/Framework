@@ -1,4 +1,4 @@
-open "1111" "2"
+open "http://localhost" "asd"
 checkPageTitle "2" "2" "2"
 checkPageContainsText  "Test automation tools can be expensive"
 checkLinkPresentByHref "/wiki/API_testing" 

@@ -20,8 +20,9 @@ public class CommandOpen extends Command {
         LOGGER.debug("Command: " + getName());
 
         if (validateParams(2, params)) {
-            int CONNECTION_TIMEOUT_MS = Integer.parseInt(params[1]) * 1000;
+            
             try {
+            	int CONNECTION_TIMEOUT_MS = Integer.parseInt(params[1]) * 1000;
             	// JSoup only downloads html code that is present in that page.
             	// It does not download JavaScript-generated html, linked css or js or
             	// images.That's why our tests will run faster.
@@ -31,12 +32,17 @@ public class CommandOpen extends Command {
                     return new CommandResult(true, getName()  + buildParamsString(params));
                 }
              } catch (IOException e) {
-                LOGGER.error("Unfortunately we can't read the response from " + "\"" + params[0] + "\"");
+                LOGGER.error("Unfortunately we can't read the response from " + "\"" + buildParamsString(params) + "\"");
                 // handling MalformetURLException, because "Connection" re-thows MalformetURLException to IllegalArgumentException
-            } catch (IllegalArgumentException ieax) {
+            } catch (NumberFormatException ieax) {
                 resetTimer();
-                LOGGER.error("Unfortunately we can't open " + "\"" + params[0] + "\"");
+                LOGGER.error("Bat timeout data.Command: " + getName() + " " + buildParamsString(params) + " " + "failed.");
+            } 
+            catch (IllegalArgumentException ieax) {
+                resetTimer();
+                LOGGER.error("Unfortunately we can't open " + "\"" + buildParamsString(params) + "\"");
             }
+           
         }
         document = null;
         return new CommandResult(false, getName() + " " + buildParamsString(params));
